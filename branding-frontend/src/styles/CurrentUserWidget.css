@@ -1,0 +1,195 @@
+/* src/styles/CurrentUserWidget.css */
+:root {
+  --cuw-accent: #1766e5;
+  --cuw-accent-soft: #5a8ff0;
+  --cuw-bg: rgba(255, 255, 255, 0.62);
+  --cuw-bg-strong: rgba(255, 255, 255, 0.82);
+  --cuw-text: #0f172a;
+  --cuw-sub: rgba(15, 23, 42, 0.62);
+  --cuw-border: rgba(15, 23, 42, 0.14);
+  --cuw-shadow: 0 10px 30px rgba(15, 23, 42, 0.14);
+}
+
+.current-user-widget {
+  box-sizing: border-box;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9997;
+  width: 276px;
+  font-family:
+    "Noto Sans KR",
+    "Manrope",
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    sans-serif;
+}
+
+.current-user-pill {
+  width: 100%;
+  border: 1.4px solid rgba(15, 23, 42, 0.2);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.74),
+    rgba(255, 255, 255, 0.58)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: var(--cuw-text);
+  box-shadow: var(--cuw-shadow);
+  border-radius: 999px;
+  padding: 10px 13px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.current-user-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.18);
+}
+
+.current-user-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    var(--cuw-accent),
+    var(--cuw-accent-soft)
+  );
+  box-shadow: 0 0 0 4px rgba(23, 102, 229, 0.14);
+  flex: 0 0 auto;
+}
+
+.current-user-text {
+  display: grid;
+  gap: 1px;
+  min-width: 0;
+  text-align: left;
+}
+.current-user-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--cuw-sub);
+  line-height: 1.2;
+}
+.current-user-id {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  max-width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.current-user-meta {
+  margin-top: 1px;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(51, 65, 85, 0.86);
+}
+.current-user-chev {
+  margin-left: auto;
+  font-size: 11px;
+  opacity: 0.85;
+  transition: transform 0.16s ease;
+}
+.current-user-widget.is-open .current-user-chev {
+  transform: rotate(180deg);
+}
+
+.current-user-panel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(100% + 8px);
+  background: linear-gradient(
+    180deg,
+    var(--cuw-bg-strong),
+    rgba(255, 255, 255, 0.72)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--cuw-border);
+  border-radius: 18px;
+  box-shadow: var(--cuw-shadow);
+  overflow: hidden;
+
+  opacity: 0;
+  transform: translateY(8px) scale(0.985);
+  transform-origin: bottom right;
+  pointer-events: none;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+.current-user-widget.is-open .current-user-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.current-user-stats {
+  padding: 12px 14px 10px;
+  background: rgba(243, 246, 251, 0.72);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+.current-user-stats h4 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+  color: #3159b8;
+}
+.stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2937;
+  padding: 3px 0;
+}
+.stat-row strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.current-user-menu-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  text-align: left;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--cuw-text);
+}
+.current-user-menu-item:hover {
+  background: rgba(245, 247, 255, 0.75);
+}
+.current-user-menu-item.danger {
+  color: #c1121f;
+}
+
+@media (max-width: 640px) {
+  .current-user-widget {
+    box-sizing: border-box;
+    right: 12px;
+    bottom: 12px;
+    width: min(290px, calc(100vw - 24px));
+  }
+}
+
+.current-user-widget,
+.current-user-widget * {
+  box-sizing: border-box;
+}

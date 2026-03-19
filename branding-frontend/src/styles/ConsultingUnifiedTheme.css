@@ -1,0 +1,793 @@
+/* src/styles/ConsultingUnifiedTheme.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Noto+Sans+KR:wght@400;500;700&display=swap");
+
+/* =========================================================
+   Unified Interview / Result Theme
+   - Scope: diagnosis interview/result + naming/concept/story/logo interviews
+   - Purpose: visual consistency only (no behavior/route/API changes)
+   ========================================================= */
+
+.diagInterview,
+.diagResult {
+  --consult-navy: #001f66;
+  --consult-blue: #1d4ed8;
+  --consult-cyan: #0891b2;
+  --consult-line: rgba(15, 23, 42, 0.12);
+  --consult-text: #0f172a;
+  --consult-muted: #475569;
+  --consult-soft: #eef4ff;
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  background:
+    radial-gradient(
+      1100px 420px at 18% -120px,
+      rgba(29, 78, 216, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 340px at 110% -120px,
+      rgba(8, 145, 178, 0.1),
+      transparent 62%
+    ),
+    #f6f8fc;
+}
+
+/* ===== Shared hero look ===== */
+.diagInterview .diagInterviewHero,
+.diagResult .diagResultHero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  background: linear-gradient(135deg, #f8fbff 0%, #f3f7ff 52%, #eefafd 100%);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+}
+
+.diagInterview .diagInterviewHero::before,
+.diagResult .diagResultHero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      380px 150px at 88% 0%,
+      rgba(29, 78, 216, 0.12),
+      transparent 70%
+    ),
+    radial-gradient(
+      320px 160px at 12% 100%,
+      rgba(8, 145, 178, 0.1),
+      transparent 72%
+    );
+  pointer-events: none;
+}
+
+.diagInterview .diagInterview__title,
+.diagResult .diagResult__title {
+  color: #0b1736;
+  letter-spacing: -0.01em;
+}
+
+.diagInterview .diagInterview__sub,
+.diagResult .diagResult__sub {
+  color: #334155;
+}
+
+.diagInterview .diagInterviewHero__chip,
+.diagResult .diagResultHero__chip {
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(255, 255, 255, 0.9);
+  color: #334155;
+}
+
+.diagInterview .diagInterviewHero__chip.state.ready,
+.diagResult .diagResultHero__chip.state.ready {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: rgba(37, 99, 235, 0.1);
+  color: #1e3a8a;
+}
+
+.diagInterview .diagInterviewHero__chip.state.pending,
+.diagResult .diagResultHero__chip.state.pending {
+  border-color: rgba(245, 158, 11, 0.38);
+  background: rgba(245, 158, 11, 0.1);
+  color: #92400e;
+}
+
+.diagInterview .diagInterviewHero__status,
+.diagResult .diagResultHero__status {
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.diagInterview .diagInterviewHero__status.ready,
+.diagResult .diagResultHero__status.ready {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: rgba(37, 99, 235, 0.08);
+  color: #1e3a8a;
+}
+
+/* ===== Card uniformity ===== */
+.diagInterview .card,
+.diagInterview .sideCard,
+.diagResult .card,
+.diagResult .sideCard {
+  border-radius: 16px;
+  border: 1px solid var(--consult-line);
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+/* ===== Question completion state ===== */
+.diagInterview .questionCard,
+.diagInterview .questionField {
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.diagInterview .questionCard.is-complete {
+  border-color: rgba(37, 99, 235, 0.26);
+  background: linear-gradient(
+    180deg,
+    rgba(59, 130, 246, 0.08),
+    rgba(59, 130, 246, 0.035)
+  );
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.08);
+}
+
+.diagInterview .questionField {
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+
+.diagInterview .questionField.is-complete {
+  border-color: rgba(37, 99, 235, 0.24);
+  background: linear-gradient(
+    180deg,
+    rgba(59, 130, 246, 0.095),
+    rgba(59, 130, 246, 0.04)
+  );
+}
+
+.diagInterview .questionField.is-complete:focus-within {
+  border-color: rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.diagInterview .card__head h2,
+.diagResult .card__head h2 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.diagInterview .card__head p,
+.diagResult .card__head p {
+  color: #64748b;
+}
+
+/* ===== Consulting intro card (공통 안내 박스) ===== */
+.diagInterview.consultingInterview .consultingIntroCard {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(37, 99, 235, 0.28);
+  background: linear-gradient(
+    135deg,
+    rgba(237, 245, 255, 0.98) 0%,
+    rgba(233, 248, 255, 0.96) 55%,
+    rgba(244, 252, 255, 0.97) 100%
+  );
+  box-shadow: 0 12px 28px rgba(29, 78, 216, 0.1);
+}
+
+.diagInterview.consultingInterview .consultingIntroCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      360px 140px at 90% -20%,
+      rgba(29, 78, 216, 0.16),
+      transparent 70%
+    ),
+    radial-gradient(
+      260px 120px at -10% 120%,
+      rgba(6, 182, 212, 0.12),
+      transparent 72%
+    );
+}
+
+.diagInterview.consultingInterview .consultingIntroCard .card__head {
+  position: relative;
+  z-index: 1;
+}
+
+.diagInterview.consultingInterview .consultingIntroCard .card__head h2 {
+  margin: 0;
+  font-size: clamp(22px, 1rem + 0.65vw, 28px);
+  font-weight: 900;
+  letter-spacing: -0.015em;
+  color: #0b1736;
+}
+
+.diagInterview.consultingInterview .consultingIntroCard .card__head p {
+  margin: 10px 0 0;
+  font-size: clamp(14px, 0.88rem + 0.2vw, 16px);
+  line-height: 1.58;
+  color: #334155;
+}
+
+/* ===== Field consistency ===== */
+.diagInterview .field input,
+.diagInterview .field textarea,
+.diagInterview .field select {
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.42);
+  background: #fff;
+}
+
+.diagInterview .field input:focus,
+.diagInterview .field textarea:focus,
+.diagInterview .field select:focus {
+  border-color: rgba(37, 99, 235, 0.45);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+/* ===== Button consistency (Diagnosis Result color mismatch included) ===== */
+.diagInterview .btn,
+.diagResult .btn {
+  border-radius: 12px;
+  font-weight: 800;
+  transition:
+    transform 0.16s ease,
+    box-shadow 0.2s ease,
+    border-color 0.16s ease,
+    background 0.2s ease;
+}
+
+.diagInterview .btn:hover,
+.diagResult .btn:hover {
+  transform: translateY(-1px);
+}
+
+.diagInterview .btn.primary,
+.diagResult .btn.primary {
+  background: linear-gradient(135deg, #002a7a 0%, #0044a9 58%, #0057c2 100%);
+  border-color: #00358f;
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 31, 102, 0.22);
+}
+
+.diagInterview .btn.primary:hover,
+.diagResult .btn.primary:hover {
+  filter: saturate(1.04);
+  box-shadow: 0 12px 24px rgba(0, 31, 102, 0.28);
+}
+
+.diagInterview .btn.ghost,
+.diagResult .btn.ghost,
+.diagResult .btn:not(.primary):not(.ghost),
+.diagInterview .btn:not(.primary):not(.ghost) {
+  background: rgba(255, 255, 255, 0.86);
+  border-color: rgba(148, 163, 184, 0.45);
+}
+
+.diagInterview .btn.ghost:hover,
+.diagResult .btn.ghost:hover,
+.diagInterview .btn:not(.primary):not(.ghost):hover,
+.diagResult .btn:not(.primary):not(.ghost):hover {
+  border-color: rgba(37, 99, 235, 0.4);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+/* ===== Selection visuals across interviews ===== */
+.diagInterview.consultingInterview .candidateCard {
+  border-color: rgba(148, 163, 184, 0.38);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+.diagInterview.consultingInterview .candidateCard:hover {
+  border-color: rgba(37, 99, 235, 0.34);
+  box-shadow: 0 12px 28px rgba(37, 99, 235, 0.11);
+}
+
+.diagInterview.consultingInterview .candidateCard:focus {
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.14),
+    0 12px 28px rgba(37, 99, 235, 0.11);
+}
+
+.diagInterview.consultingInterview .candidateCard.selected {
+  border: 1px solid rgba(37, 99, 235, 0.45) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.08),
+    rgba(255, 255, 255, 0.95)
+  );
+  box-shadow: 0 14px 30px rgba(37, 99, 235, 0.14) !important;
+}
+
+.diagInterview.consultingInterview .candidateCard.selected .candidateBadge {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.34);
+  color: rgba(30, 64, 175, 0.96);
+}
+
+.diagInterview.consultingInterview .candidateMore {
+  color: rgba(37, 99, 235, 0.95);
+}
+
+/* multi-chip / radio-like option consistency (inline style override) */
+.diagInterview.consultingInterview .chip.active,
+.diagInterview.consultingInterview .field button[aria-pressed="true"],
+.diagInterview.consultingInterview .card button[aria-pressed="true"] {
+  background: rgba(37, 99, 235, 0.1) !important;
+  border-color: rgba(37, 99, 235, 0.42) !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14) !important;
+}
+
+.diagInterview.consultingInterview .field button[aria-pressed="false"],
+.diagInterview.consultingInterview .card button[aria-pressed="false"] {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(148, 163, 184, 0.42) !important;
+}
+
+.diagInterview.consultingInterview .field button[aria-pressed="false"]:hover,
+.diagInterview.consultingInterview .card button[aria-pressed="false"]:hover {
+  border-color: rgba(37, 99, 235, 0.34) !important;
+  background: rgba(37, 99, 235, 0.05) !important;
+}
+
+/* side checklist */
+.diagInterview .checkItemBtn,
+.diagInterview .jumpBtn {
+  border-radius: 12px;
+}
+
+.diagInterview .checkItemBtn.ok {
+  border-color: rgba(37, 99, 235, 0.36);
+  background: rgba(37, 99, 235, 0.08);
+  color: #1e40af;
+}
+
+.diagInterview .checkItemBtn.todo {
+  border-color: rgba(148, 163, 184, 0.42);
+  background: rgba(248, 250, 252, 0.92);
+  color: #334155;
+}
+
+.diagInterview .jumpBtn:hover,
+.diagInterview .jumpBtn.current {
+  border-color: rgba(37, 99, 235, 0.42);
+  background: rgba(37, 99, 235, 0.08);
+}
+
+/* top-to-bottom ready notice consistency */
+.diagInterview .diagBottomReadyNotice,
+.diagResult .diagBottomReadyNotice {
+  border-color: rgba(37, 99, 235, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.08),
+    rgba(37, 99, 235, 0.03)
+  );
+  color: #1e3a8a;
+}
+
+@media (max-width: 980px) {
+  .diagInterview .diagInterviewHero,
+  .diagResult .diagResultHero {
+    border-radius: 14px;
+  }
+
+  .diagInterview .card,
+  .diagInterview .sideCard,
+  .diagResult .card,
+  .diagResult .sideCard {
+    border-radius: 14px;
+  }
+}
+
+/* ===== AI loading overlay ===== */
+.aiLoadingOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(
+      1200px 520px at 10% -20%,
+      rgba(29, 78, 216, 0.24),
+      transparent 56%
+    ),
+    radial-gradient(
+      960px 460px at 110% 120%,
+      rgba(8, 145, 178, 0.18),
+      transparent 58%
+    ),
+    rgba(15, 23, 42, 0.48);
+  backdrop-filter: blur(4px);
+}
+
+.aiLoadingOverlay__card {
+  width: min(92vw, 520px);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  border-radius: 18px;
+  background: linear-gradient(165deg, #f9fbff 0%, #f2f7ff 60%, #eef8fc 100%);
+  box-shadow: 0 26px 56px rgba(2, 6, 23, 0.24);
+  padding: 28px 24px;
+  text-align: center;
+  color: #0f172a;
+}
+
+.aiLoadingOverlay__spinner {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 14px;
+  border-radius: 50%;
+  border: 4px solid rgba(37, 99, 235, 0.18);
+  border-top-color: #1d4ed8;
+  animation: aiLoadingSpin 0.8s linear infinite;
+}
+
+.aiLoadingOverlay__card h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.aiLoadingOverlay__card p {
+  margin: 10px 0 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #475569;
+}
+
+@keyframes aiLoadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 680px) {
+  .aiLoadingOverlay__card {
+    border-radius: 14px;
+    padding: 22px 16px;
+  }
+
+  .aiLoadingOverlay__card h3 {
+    font-size: 17px;
+  }
+
+  .aiLoadingOverlay__card p {
+    font-size: 13px;
+  }
+}
+
+/* ===== Interview question typography (unified / professional) =====
+   - 기업진단, 네이밍, 컨셉, 스토리, 로고 인터뷰 공통
+*/
+.diagInterview .field > label,
+.diagInterview .field label,
+.diagInterview.consultingInterview .field > label,
+.diagInterview.consultingInterview .field label {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.58 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.003em;
+  color: #0f172a !important;
+}
+
+.diagInterview .field input,
+.diagInterview .field textarea,
+.diagInterview .field select,
+.diagInterview.consultingInterview .field input,
+.diagInterview.consultingInterview .field textarea,
+.diagInterview.consultingInterview .field select {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+
+.diagInterview .helper,
+.diagInterview .hint,
+.diagInterview.consultingInterview .helper,
+.diagInterview.consultingInterview .hint {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+/* 스토리 인터뷰 번호 포함 질문 번호 표현 통일 */
+.diagInterview .questionNumber,
+.diagInterview.consultingInterview .questionNumber {
+  display: inline;
+  margin-right: 4px;
+  font-size: 12px !important;
+  line-height: inherit;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+
+/* ===== Proposal card visual / typography consistency =====
+   - 네이밍, 컨셉, 스토리, 로고 제안 카드 공통
+*/
+.diagInterview.consultingInterview .candidateCard {
+  border-radius: 16px !important;
+  border: 1px solid rgba(15, 23, 42, 0.1) !important;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(248, 250, 255, 0.92) 100%
+  ) !important;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08) !important;
+  padding: 14px !important;
+}
+
+.diagInterview.consultingInterview .candidateHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.diagInterview.consultingInterview .candidateTitle {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.35 !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+
+.diagInterview.consultingInterview .candidateBadge {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+
+.diagInterview.consultingInterview .candidateSectionLabel,
+.diagInterview.consultingInterview .candidateSectionLabel--ai {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  font-weight: 800 !important;
+}
+
+.diagInterview.consultingInterview .candidateSectionText,
+.diagInterview.consultingInterview .candidateDetailItem,
+.diagInterview.consultingInterview .candidateBody {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.58 !important;
+  color: rgba(15, 23, 42, 0.92) !important;
+}
+
+/* 네이밍/스토리/로고의 큰 타이포를 컨셉 카드와 동일 스케일로 정리 */
+.diagInterview.consultingInterview .candidateAiValue {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.5 !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.01em;
+}
+
+.diagInterview.consultingInterview .candidateMore {
+  font-family: "Manrope", "Noto Sans KR", sans-serif !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+}
+
+@media (max-width: 780px) {
+  .diagInterview.consultingInterview .candidateTitle {
+    font-size: 14px !important;
+  }
+
+  .diagInterview.consultingInterview .candidateSectionText,
+  .diagInterview.consultingInterview .candidateDetailItem,
+  .diagInterview.consultingInterview .candidateBody {
+    font-size: 12.5px !important;
+  }
+
+  .diagInterview.consultingInterview .candidateAiValue {
+    font-size: 14px !important;
+  }
+}
+
+/* ===== Shared AI loading card (naming/concept/story/logo) ===== */
+.diagInterview.consultingInterview .namingLoadingCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(239, 246, 255, 0.96) 100%
+  );
+  box-shadow:
+    0 10px 28px rgba(30, 64, 175, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__glow {
+  position: absolute;
+  right: -80px;
+  top: -72px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(59, 130, 246, 0) 72%
+  );
+  pointer-events: none;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(30, 64, 175, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: rgba(30, 64, 175, 0.98);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__elapsed {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(30, 64, 175, 0.92);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__head h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgba(37, 99, 235, 0.28);
+  border-top-color: rgba(37, 99, 235, 0.95);
+  animation: aiSpin 0.9s linear infinite;
+  flex: 0 0 auto;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(51, 65, 85, 0.95);
+  font-weight: 600;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__steps {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  color: rgba(51, 65, 85, 0.9);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__step.is-active {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.42);
+  color: rgba(30, 64, 175, 0.98);
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__progress {
+  margin-top: 12px;
+  height: 9px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  overflow: hidden;
+}
+
+@keyframes namingCardLoadShared {
+  0% {
+    width: 18%;
+  }
+  45% {
+    width: 62%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__progressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  animation: namingCardLoadShared 1.5s ease-in-out infinite alternate;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__wait {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(30, 64, 175, 0.94);
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__dots::after {
+  content: "...";
+  display: inline-block;
+  width: 16px;
+  text-align: left;
+  letter-spacing: 2px;
+  animation: namingDotsShared 1s steps(4, end) infinite;
+}
+
+@keyframes namingDotsShared {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .diagInterview.consultingInterview .namingLoadingCard__head h2 {
+    font-size: 20px;
+  }
+
+  .diagInterview.consultingInterview .namingLoadingCard__desc {
+    font-size: 13px;
+  }
+}

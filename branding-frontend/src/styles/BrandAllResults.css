@@ -1,0 +1,260 @@
+/* src/styles/BrandAllResults.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+.brandAll-page {
+  min-height: 100vh;
+  background: var(--ui-bg, #f6f7fb);
+}
+
+.brandAll-main {
+  padding: 28px 0 52px;
+}
+
+.brandAll-container {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.brandAll-titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.brandAll-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.brandAll-sub {
+  margin: 8px 0 0;
+  color: #5b6476;
+  line-height: 1.6;
+  font-size: 13px;
+}
+
+.brandAll-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* 좌: 카드 리스트 / 우: 사이드 요약 */
+.brandAll-grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 960px) {
+  .brandAll-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.brandAll-left {
+  display: grid;
+  gap: 14px;
+}
+
+.brandAll-card {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  background: #ffffff;
+  box-shadow: var(--ui-shadow-md, 0 14px 34px rgba(15, 23, 42, 0.08));
+}
+
+.brandAll-cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.brandAll-cardTitle {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.brandAll-cardDesc {
+  margin: 6px 0 0;
+  color: #5b6476;
+  font-size: 13px;
+}
+
+.brandAll-meta {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.brandAll-metaRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.brandAll-metaRow .k {
+  min-width: 84px;
+  color: #6b7280;
+}
+
+.brandAll-metaRow .v {
+  color: #0f172a;
+  font-weight: 600;
+}
+
+.brandAll-cardActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+/* 상태 pill */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.status-pill.success {
+  background: rgba(34, 197, 94, 0.14);
+  color: #166534;
+}
+
+.status-pill.progress {
+  background: rgba(234, 179, 8, 0.18);
+  color: #92400e;
+}
+
+.status-pill.ghost {
+  background: rgba(0, 0, 0, 0.04);
+  color: #6b7280;
+}
+
+/* 오른쪽 요약 카드 */
+.brandAll-page .sideCard {
+  position: sticky;
+  top: 14px;
+  background: #fff;
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--ui-shadow-md, 0 14px 34px rgba(15, 23, 42, 0.08));
+}
+
+.brandAll-page .sideCard__titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brandAll-page .sideCard h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.brandAll-page .badge {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--ui-accent, #2563eb);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.brandAll-page .progressBar {
+  margin-top: 12px;
+  height: 10px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #edf1f8;
+}
+
+.brandAll-page .progressBar__fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ui-brand, #001f66);
+}
+
+.brandAll-page .sideMeta {
+  margin-top: 12px;
+}
+
+.brandAll-page .sideMeta__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #5b6476;
+}
+
+.brandAll-page .sideMeta__row .v {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.brandAll-page .divider {
+  height: 1px;
+  background: #e6e9f1;
+  margin: 14px 0;
+}
+
+.brandAll-page .sideSubTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.brandAll-page .jumpGrid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.brandAll-page .jumpBtn {
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #334155;
+  cursor: pointer;
+}
+
+.brandAll-page .jumpBtn:hover {
+  border-color: rgba(37, 99, 235, 0.45);
+  background: #f8fbff;
+}
+
+.brandAll-page .w100 {
+  width: 100%;
+}
+
+.brandAll-page .hint {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #5b6476;
+  line-height: 1.6;
+}
+
+@media (max-width: 980px) {
+  .brandAll-page .sideCard {
+    position: static;
+  }
+}

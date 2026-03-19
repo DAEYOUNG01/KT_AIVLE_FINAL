@@ -1,0 +1,150 @@
+/* ConsultingFlowPanel.css
+   - 상단 단계 카드(네이밍/컨셉/스토리/로고) UI
+   - 이동 제한(이전 단계 미완료) 시 경고는 사이드 카드(ConsultingFlowMini)에서 노출
+*/
+
+.flowPanel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.06);
+  /* 인터뷰 질문 시작 카드와 붙어 보이지 않도록 하단 여백 확보 */
+  margin-bottom: 18px;
+}
+
+.flowPanel__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.flowPanel__title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #111827;
+  letter-spacing: -0.01em;
+}
+
+.flowPanel__hint {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.2;
+  text-align: right;
+}
+
+.flowPanel__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 980px) {
+  .flowPanel__steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px) {
+  .flowPanel__steps {
+    grid-template-columns: 1fr;
+  }
+  .flowPanel__head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .flowPanel__hint {
+    text-align: left;
+  }
+}
+
+.flowStep {
+  width: 100%;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  background: #fafafa;
+  border-radius: 16px;
+  padding: 12px 12px 10px;
+  cursor: pointer;
+  transition:
+    transform 0.08s ease,
+    background 0.12s ease,
+    border-color 0.12s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 82px;
+}
+
+.flowStep:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.flowStep:active {
+  transform: translateY(0px);
+}
+
+.flowStep:focus-visible {
+  outline: 2px solid rgba(17, 24, 39, 0.9);
+  outline-offset: 2px;
+}
+
+.flowStep.isLocked {
+  cursor: not-allowed;
+  opacity: 0.72;
+}
+
+.flowStep.isLocked:hover {
+  background: #fafafa;
+  transform: none;
+}
+
+.flowStep.isActive {
+  background: #fff;
+  border-color: #111827;
+}
+
+.flowStep.isDone {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+}
+
+.flowStep__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flowStep__label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.flowStep__desc {
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.35;
+}
+
+.flowStep__status {
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.08);
+  color: #111827;
+}
+
+.flowStep.isDone .flowStep__status {
+  background: rgba(16, 185, 129, 0.18);
+  color: #065f46;
+}
+
+.flowStep.isLocked .flowStep__status {
+  background: rgba(107, 114, 128, 0.18);
+  color: #374151;
+}

@@ -1,0 +1,738 @@
+/* src/styles/Signup.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+:root {
+  --navy: #001f66;
+  --navy-dark: #001f66;
+  --blue: #1766e5;
+  --text: #111827;
+  --muted: #8a90a3;
+  --line: #d9deea;
+  --panel: #ffffff;
+}
+
+.signup-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.signup-shell {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* ✅ 50:50 */
+  overflow: hidden;
+  position: relative;
+
+  perspective: 1800px;
+  transform-style: preserve-3d;
+  will-change: transform;
+  isolation: isolate;
+  contain: layout paint style;
+  transform: translateZ(0);
+  --flip-duration: 0.85s;
+  --flip-ease: cubic-bezier(0.25, 0.66, 0.33, 1);
+}
+
+/* ✅ 회원가입 -> 로그인 역방향 책장 넘김 */
+
+/* 다음 페이지(로그인) 미리보기는 플립 초반부터 보이기 */
+
+/* Left 소개 패널 */
+.signup-hero {
+  padding: 52px 56px;
+  display: grid;
+  align-content: space-between;
+  gap: 18px;
+
+  background: linear-gradient(160deg, var(--navy), var(--navy-dark));
+  color: #f1f4ff;
+
+  position: relative;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.signup-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, var(--navy), var(--navy-dark));
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  z-index: 0;
+}
+
+.signup-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Right 회원가입 폼 패널 */
+.signup-panel {
+  display: grid;
+  place-items: center;
+  padding: 30px 20px;
+  background: #ffffff;
+
+  will-change: opacity;
+}
+
+.signup-card {
+  width: min(520px, 92%);
+  max-height: 92vh;
+  overflow: auto;
+  background: var(--panel);
+  border: 1px solid #eef1f6;
+  border-radius: 18px;
+  padding: 28px 24px 24px;
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+}
+
+.signup-title {
+  text-align: center;
+  margin: 0 0 18px;
+  font-size: 26px;
+  font-weight: 800;
+  color: #1b2030;
+}
+
+.signup-form {
+  display: grid;
+  gap: 16px;
+}
+
+.signup-page .field {
+  display: grid;
+  gap: 8px;
+}
+
+.signup-page label {
+  font-size: 13px;
+  color: #5c6476;
+  font-weight: 600;
+}
+
+.signup-page input {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  width: 100%;
+}
+
+.signup-page input:focus {
+  outline: none;
+  border-color: #9ec2ff;
+  box-shadow: 0 0 0 3px rgba(23, 102, 229, 0.12);
+}
+
+.hint {
+  font-size: 11px;
+  color: #9aa1b2;
+}
+
+.checkline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 11px;
+  line-height: 1;
+  color: #65708a;
+  border: 1px solid #d8deea;
+  background: #f7f9fc;
+}
+
+.pill.ok {
+  color: #0d6d34;
+  border-color: #a8e0ba;
+  background: #eaf9ef;
+}
+
+.primary,
+.secondary {
+  border-radius: 12px;
+  padding: 12px 0;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary {
+  border: none;
+  background: var(--blue);
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid #d9deea;
+  background: #fff;
+  color: #4f5665;
+}
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  margin: 0;
+  color: #d92d20;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.date-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date-input input {
+  width: 100%;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 14px;
+  font-size: 18px;
+  color: #8a90a3;
+  pointer-events: none;
+}
+
+.react-datepicker {
+  font-family: inherit;
+  border-radius: 12px;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.button-row button {
+  flex: 1;
+}
+
+/* Hero 내부 공통 요소 (Login과 분위기 통일) */
+.hero-top {
+  display: grid;
+  gap: 6px;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.hero-title-line {
+  display: block;
+  font-size: 40px;
+  text-shadow: 0 6px 18px rgba(4, 8, 22, 0.55);
+}
+
+.feature-marquee {
+  position: relative;
+  overflow: hidden;
+  margin-top: 18px;
+  padding: 8px 0;
+}
+
+.feature-marquee::before,
+.feature-marquee::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 90px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.feature-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, rgba(0, 31, 102, 1), rgba(0, 31, 102, 0));
+}
+.feature-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, rgba(0, 31, 102, 1), rgba(0, 31, 102, 0));
+}
+
+.marquee-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  width: max-content;
+  animation: signupMarquee 24s linear infinite;
+  will-change: transform;
+}
+
+.marquee-card {
+  width: 220px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.marquee-card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 12px;
+}
+
+.marquee-card strong {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.marquee-card p {
+  font-size: 13px;
+  line-height: 1.4;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@keyframes signupMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-footer {
+  margin-top: auto;
+  padding-top: 18px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+}
+
+.hero-footer-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.hero-footer-link {
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.hero-footer-link:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
+.hero-footer-sep {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.hero-footer-text {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-footer-text strong {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-footer-copy {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* 동의 모달 */
+.consent-like-shot {
+  display: grid;
+  gap: 14px;
+  padding-top: 2px;
+}
+
+.consent-guide {
+  margin: 0;
+  font-size: 13px;
+  color: #4f5665;
+  line-height: 1.5;
+  background: #f6f8fd;
+  border: 1px solid #e2e8f4;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.consent-sheet {
+  border: 1px solid #d4d9e2;
+  border-radius: 12px;
+  background: #fff;
+  padding: 14px 14px 10px;
+}
+
+.consent-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 52px;
+  color: #161b26;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.consent-check + .consent-check {
+  margin-top: 6px;
+}
+
+.consent-check.is-locked .consent-label {
+  color: #666f82;
+}
+
+.consent-check--all {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.consent-label {
+  line-height: 1.3;
+}
+
+.consent-box {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 3px solid #aeb5c2;
+  background: #fff;
+  display: inline-grid;
+  place-content: center;
+  cursor: pointer;
+  flex: 0 0 42px;
+  margin: 0;
+}
+
+.consent-box:disabled {
+  background: #f5f6fa;
+  border-color: #c5ccda;
+  cursor: not-allowed;
+}
+
+.consent-box::after {
+  content: "";
+  width: 11px;
+  height: 20px;
+  border-right: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  transform: rotate(45deg) scale(0);
+  transition: transform 0.12s ease-in-out;
+}
+
+.consent-box:checked {
+  background: #1766e5;
+  border-color: #1766e5;
+}
+
+.consent-box:checked::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.consent-box:focus-visible {
+  outline: 3px solid rgba(23, 102, 229, 0.25);
+  outline-offset: 2px;
+}
+
+.consent-divider {
+  border-top: 2px solid #e2e6ee;
+  margin: 10px 0 12px;
+}
+
+/* 상태 뱃지 */
+.consent-status {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* 미열람: 글자 표시 */
+.consent-status.pending {
+  border-radius: 999px;
+  padding: 8px 14px;
+  min-height: 40px;
+  width: auto;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  color: #955f00;
+  background: #fff7e6;
+  border: 1px solid #ffd99b;
+  gap: 8px;
+}
+
+.consent-status.pending::before {
+  content: "⏳";
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* 열람 완료: 아이콘만 표시 */
+.consent-status.done {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  padding: 0;
+  border-radius: 999px;
+  background: #eafaf2;
+  border: 1px solid #b9e8cb;
+  font-size: 0;
+  line-height: 0;
+}
+
+.consent-status.done::before {
+  content: "✅";
+  font-size: 19px;
+  line-height: 1;
+}
+
+.consent-view {
+  border: 1px solid #1766e5;
+  background: #eef4ff;
+  color: #124fb8;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  min-width: 68px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(23, 102, 229, 0.14);
+  transition:
+    transform 0.14s ease,
+    background 0.14s ease,
+    color 0.14s ease,
+    box-shadow 0.14s ease;
+}
+
+.consent-view:hover {
+  background: #1766e5;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(23, 102, 229, 0.2);
+  transform: translateY(-1px);
+}
+
+.consent-view:active {
+  transform: translateY(0);
+}
+
+.consent-view:disabled {
+  opacity: 0.55;
+  cursor: default;
+  transform: none;
+  box-shadow: none;
+}
+
+.consent-error {
+  margin-top: -2px;
+}
+
+.consent-actions {
+  margin-top: 2px;
+}
+
+/* 약관 전문 읽기 모달 */
+.policy-read-wrap {
+  display: grid;
+  gap: 12px;
+}
+
+.policy-read-guide {
+  margin: 0;
+  font-size: 13px;
+  color: #4f5665;
+  line-height: 1.5;
+  background: #f6f8fd;
+  border: 1px solid #e2e8f4;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.policy-scroll-box {
+  border: 1px solid #e2e8f4;
+  border-radius: 10px;
+  background: #fff;
+  height: min(48vh, 420px);
+  overflow-y: auto;
+  padding: 14px;
+}
+
+.policy-read-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.policy-read-actions button {
+  flex: 1;
+}
+
+@media (max-width: 980px) {
+  .signup-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-hero {
+    display: none;
+  }
+
+  .signup-panel {
+    padding: 28px 14px;
+  }
+
+  .signup-card {
+    width: min(560px, 96%);
+    max-height: none;
+  }
+
+  
+
+  
+
+  .consent-check {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .signup-card {
+    padding: 22px 16px 18px;
+  }
+
+  .button-row,
+  .policy-read-actions {
+    flex-direction: column;
+  }
+
+  .consent-sheet {
+    padding: 12px 10px 10px;
+  }
+
+  .consent-check {
+    gap: 10px;
+    font-size: 15px;
+    flex-wrap: wrap;
+  }
+
+  .consent-box {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    flex-basis: 34px;
+  }
+
+  .consent-check--all {
+    font-size: 15px;
+  }
+
+  .consent-status {
+    order: 3;
+    margin-left: 46px;
+  }
+
+  .consent-status.pending {
+    font-size: 14px;
+    padding: 7px 12px;
+    min-height: 36px;
+  }
+
+  .consent-status.pending::before {
+    font-size: 16px;
+  }
+
+  .consent-status.done {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .consent-status.done::before {
+    font-size: 17px;
+  }
+
+  .consent-view {
+    margin-left: auto;
+    padding: 7px 12px;
+    min-width: 62px;
+  }
+
+  .policy-scroll-box {
+    height: min(52vh, 420px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  
+
+  
+}
+
+@keyframes signupPanelFadeOut85 {
+  0%,
+  26% {
+    opacity: 1;
+  }
+  42%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes paperShadeRight {
+  0% {
+    opacity: 0.86;
+  }
+  35% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0.92;
+  }
+  100% {
+    opacity: 0.72;
+  }
+}

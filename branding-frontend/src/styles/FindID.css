@@ -1,0 +1,211 @@
+/* src/styles/FindID.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+:root {
+  --navy: #001f66;
+  --blue: #1766e5;
+  --text: #111827;
+  --muted: #8a90a3;
+  --line: #d9deea;
+  --panel: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background: #f5f6fb;
+}
+
+.findid-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: start;
+}
+
+.findid-card {
+  width: min(440px, 92vw);
+  margin: 56px auto 28px;
+  background: var(--panel);
+  border: 1px solid #eef1f6;
+  border-radius: 18px;
+  padding: 32px 28px 26px;
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+}
+
+.findid-title {
+  text-align: center;
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.findid-sub {
+  margin: 0 0 16px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.findid-sub strong {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.findid-form {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+label {
+  font-size: 13px;
+  color: #5c6476;
+  font-weight: 700;
+}
+
+input {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #fff;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border-color: #9ec2ff;
+  box-shadow: 0 0 0 3px rgba(23, 102, 229, 0.12);
+}
+
+input:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.helper {
+  margin-top: -2px;
+  font-size: 11px;
+  color: #9aa1b2;
+  line-height: 1.4;
+}
+
+/* 메시지 */
+.notice {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #1b4fd8;
+  font-weight: 700;
+  text-align: center;
+}
+
+.error {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: #d92d20;
+  font-weight: 800;
+  text-align: center;
+}
+
+/* 결과 박스 */
+.resultBox {
+  border: 1px solid rgba(23, 102, 229, 0.18);
+  background: rgba(23, 102, 229, 0.06);
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.resultTop {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resultBadge {
+  font-size: 11px;
+  font-weight: 900;
+  color: #fff;
+  background: var(--navy);
+  padding: 4px 8px;
+  border-radius: 999px;
+}
+
+.resultLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: #1f2a44;
+}
+
+.resultValue {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: #0b2a6f;
+  background: #fff;
+  border: 1px solid rgba(23, 102, 229, 0.18);
+  padding: 12px 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.resultHint {
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.button-row {
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+/* 버튼 */
+.primary {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.primary:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.secondary {
+  border: 1px solid #d9deea;
+  border-radius: 10px;
+  padding: 12px 0;
+  background: #fff;
+  color: #4f5665;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .findid-card {
+    margin: 32px auto 22px;
+    padding: 26px 20px 22px;
+  }
+}

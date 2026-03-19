@@ -1,0 +1,157 @@
+/* src/styles/SiteFooter.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+.siteFooter,
+.site-footer {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  color: rgba(15, 23, 42, 0.82);
+  padding: 18px 24px 20px;
+  font-family:
+    "Manrope",
+    "Noto Sans KR",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  letter-spacing: -0.01em;
+}
+
+.siteFooter__inner,
+.site-footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+/* 정책 링크 */
+.siteFooter__links,
+.site-footer__links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.siteFooter__link,
+.site-footer__link {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: rgba(15, 23, 42, 0.8);
+  cursor: pointer;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.siteFooter__link:hover,
+.site-footer__link:hover {
+  color: rgba(30, 64, 175, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.siteFooter__sep,
+.site-footer__sep {
+  color: rgba(15, 23, 42, 0.34);
+  font-size: 12px;
+}
+
+/* 본문 정보 (라벨/값 정렬) */
+.siteFooter__info,
+.site-footer__info {
+  display: grid;
+  gap: 6px;
+  padding-top: 2px;
+}
+
+.siteFooter__row,
+.site-footer__row {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  column-gap: 10px;
+  align-items: baseline;
+}
+
+.siteFooter__label,
+.site-footer__label {
+  color: rgba(15, 23, 42, 0.55);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.siteFooter__value,
+.site-footer__value {
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  min-width: 0;
+  word-break: keep-all;
+}
+
+/* 하단: 카피 + 이메일 */
+.siteFooter__bottom,
+.site-footer__bottom {
+  margin-top: 2px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.siteFooter__copy,
+.site-footer__copy {
+  color: rgba(15, 23, 42, 0.58);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.siteFooter__email,
+.site-footer__email {
+  color: rgba(15, 23, 42, 0.72);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+.siteFooter__email:hover,
+.site-footer__email:hover {
+  color: rgba(30, 64, 175, 0.95);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .siteFooter,
+  .site-footer {
+    padding: 16px 16px 18px;
+  }
+
+  .siteFooter__row,
+  .site-footer__row {
+    grid-template-columns: 86px minmax(0, 1fr);
+    column-gap: 8px;
+  }
+
+  .siteFooter__bottom,
+  .site-footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .siteFooter__email,
+  .site-footer__email {
+    white-space: normal;
+  }
+}

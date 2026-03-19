@@ -1,0 +1,784 @@
+/* src/styles/BrandConsulting.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+/* ✅ 전역 body/nav-link 건드리지 말고, 페이지 스코프 안에서만 적용 */
+.brand-page {
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  background: var(--ui-bg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ✅ Hero */
+.brand-hero {
+  background: #f2f4f9;
+  padding: 0;
+}
+
+.brand-hero-inner {
+  width: 100%;
+  margin: 0;
+}
+
+/* ✅ Banner */
+.hero-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--ui-ink);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.38);
+  z-index: 0;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.hero-banner-text {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  color: #ffffff;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+  display: grid;
+  gap: 10px;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  z-index: 1;
+}
+
+/* ✅ Hero(브랜드 컨설팅 소개) */
+.bcHero {
+  width: 100%;
+  max-width: 780px;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.bcHero__pill {
+  margin: 0;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.bcHero__title {
+  margin: 2px 0 0;
+  font-size: 34px;
+  font-weight: 900;
+}
+
+.bcHero__sub {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.bcHero__cta {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ✅ Carousel */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  min-height: 90px;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+.hero-slide {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  opacity: 0;
+  animation: slideFadeX 16s infinite;
+  display: grid;
+  gap: 6px;
+  text-align: center;
+}
+
+.hero-slide strong {
+  font-size: 34px;
+  font-weight: 800;
+  display: block;
+}
+
+.hero-slide span {
+  font-size: 19px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.85);
+  display: block;
+}
+
+.hero-slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.hero-slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.hero-slide:nth-child(3) {
+  animation-delay: 8s;
+}
+.hero-slide:nth-child(4) {
+  animation-delay: 12s;
+}
+
+@keyframes slideFadeX {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(24px);
+  }
+  8%,
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateX(0);
+  }
+  33%,
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateX(-24px);
+  }
+}
+
+/* ✅ Content */
+.brand-content {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 32px 72px;
+  flex: 1;
+}
+
+.section-title {
+  margin: 0 0 24px;
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+/* ✅ Flow header (minimal + structured) */
+.bcFlowHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 0 0 14px;
+}
+
+.bcFlowHeader .section-title {
+  margin: 0;
+}
+
+.bcFlowSub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.bcFlowMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.bcMetaPill {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--ui-line);
+  background: #ffffff;
+  color: #334155;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .bcFlowHeader {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bcFlowMeta {
+    justify-content: flex-start;
+  }
+}
+
+/* ✅ Intro Card */
+.bcIntroCard {
+  background: linear-gradient(180deg, #ffffff 0%, #fbfcff 100%);
+  border: 1px solid var(--ui-line);
+  border-radius: 18px;
+  padding: 18px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 16px;
+  box-shadow: var(--ui-shadow-md);
+  margin-bottom: 18px;
+}
+
+.bcIntroCard__left h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.bcPicked {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #f2f6ff;
+  border: 1px solid #dbe7ff;
+  color: #0f172a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.bcPicked__note {
+  color: #334155;
+}
+
+.bcIntroCard__left p {
+  margin: 0 0 10px;
+  color: #334155;
+  line-height: 1.75;
+}
+
+/* ✅ Intro stats (compact info blocks) */
+.bcIntroStats {
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.bcStat {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--ui-line);
+  background: #ffffff;
+}
+
+.bcStat__k {
+  font-size: 12px;
+  font-weight: 800;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.bcStat__v {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0f172a;
+  text-align: right;
+}
+
+.bcBullets {
+  margin: 0;
+  padding-left: 18px;
+  color: #475569;
+  line-height: 1.8;
+  font-size: 13px;
+}
+
+.bcIntroCard__right {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  justify-items: stretch;
+}
+
+.bcMiniFlow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--ui-ink);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+}
+
+.bcMiniFlow__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: var(--ui-accent);
+}
+
+.bcMiniFlow__sep {
+  opacity: 0.6;
+}
+
+.bcIntroCard__actions {
+  display: grid;
+  gap: 10px;
+}
+
+.bcIntroHint {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* ✅ 5단계 흐름: 1개의 카드 안에 정리 */
+.bcFlowCard {
+  margin-top: 8px;
+  margin-bottom: 18px;
+  padding: 16px 16px 10px;
+}
+
+.bcFlowCard__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.bcFlowCard__head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.1px;
+}
+
+.bcFlowCard__head p {
+  margin: 0;
+  color: #5b6476;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ✅ 진행 순서(좌) + CTA(우) 를 한 카드 안에 배치 */
+.bcFlowCard__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 16px;
+  align-items: start;
+}
+
+.bcFlowActions {
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.02);
+  border: 1px solid var(--ui-line);
+  padding: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.bcFlowActions__title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.bcFlowActions__desc {
+  margin: 8px 0 12px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #4e5668;
+}
+
+.bcFlowActions__actions {
+  display: grid;
+  gap: 10px;
+}
+
+.bcFlowActions__hint {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.bcFlowList {
+  display: grid;
+  gap: 10px;
+}
+
+.bcFlowItem {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 10px 8px;
+  border-radius: 14px;
+}
+
+.bcFlowItem:not(:last-child) {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  padding-bottom: 14px;
+}
+
+.bcFlowItem__imgWrap {
+  position: relative;
+}
+
+.bcFlowBadge {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 2;
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(0, 0, 0, 0.36);
+  padding: 6px 10px;
+  border-radius: 999px;
+  backdrop-filter: blur(6px);
+}
+
+.bcFlowItem__img {
+  height: 120px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eef2f8;
+  border: 1px solid #e5e7ef;
+}
+
+.bcFlowItem__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bcFlowTag {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--ui-accent);
+}
+
+.bcFlowTitle {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.bcFlowSub {
+  margin: 6px 0 0;
+  color: #4e5668;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+@media (max-width: 980px) {
+  .bcFlowCard__head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .bcFlowCard__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bcFlowItem {
+    grid-template-columns: 1fr;
+  }
+  .bcFlowItem__img {
+    height: 150px;
+  }
+}
+
+/* ✅ Cards */
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.service-card--static {
+  cursor: default;
+}
+
+.service-card--static:hover {
+  transform: none;
+  box-shadow: var(--ui-shadow-md);
+}
+
+.bcBottomCTA__hint {
+  margin: 0;
+  font-size: 12px;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid var(--ui-line);
+  padding: 18px;
+  display: grid;
+  gap: 10px;
+  box-shadow: var(--ui-shadow-md);
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ui-shadow-lg);
+}
+
+.service-image {
+  border-radius: 14px;
+  overflow: hidden;
+  background: #eef2f8;
+  border: 1px solid #e5e7ef;
+  height: 180px;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.service-tag {
+  margin: 0;
+  font-size: 11px;
+  color: var(--ui-accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.service-card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #6b7280;
+  line-height: 1.6;
+  gap: 12px;
+}
+
+@media (max-width: 980px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .bcIntroCard {
+    grid-template-columns: 1fr;
+  }
+
+  .bcHero__title {
+    font-size: 34px;
+  }
+
+  .bcHero__sub {
+    font-size: 14px;
+  }
+
+  .hero-slide strong {
+    font-size: 30px;
+  }
+  .hero-slide span {
+    font-size: 18px;
+  }
+}
+
+/* =========================================================
+   ✅ Buttons (BrandConsulting 전용)
+   - 다른 페이지에 영향 없도록 .brand-page 스코프
+========================================================= */
+
+.brand-page .btn {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.12));
+  background: #ffffff;
+  color: #0f172a;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: -0.1px;
+  line-height: 1;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  cursor: pointer;
+  user-select: none;
+
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 10px 22px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s ease,
+    background 0.12s ease,
+    opacity 0.12s ease;
+}
+
+.brand-page .btn:hover {
+  border-color: rgba(23, 102, 229, 0.45);
+  transform: translateY(-1px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 16px 34px rgba(15, 23, 42, 0.1);
+}
+
+.brand-page .btn:active {
+  transform: translateY(0);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 10px 22px rgba(15, 23, 42, 0.08);
+}
+
+.brand-page .btn:focus-visible {
+  outline: 3px solid rgba(23, 102, 229, 0.35);
+  outline-offset: 2px;
+}
+
+/* Ghost: 가벼운 톤(단계 이동 버튼 등에 사용) */
+.brand-page .btn.ghost {
+  background: rgba(15, 23, 42, 0.03);
+  box-shadow: none;
+}
+
+.brand-page .btn.ghost:hover {
+  background: rgba(23, 102, 229, 0.06);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+}
+
+/* Primary: 메인 CTA */
+.brand-page .btn.primary {
+  background: var(--ui-brand, #001f66);
+  color: #ffffff;
+  border-color: var(--ui-brand, #001f66);
+  box-shadow: 0 14px 30px rgba(0, 31, 102, 0.22);
+}
+
+.brand-page .btn.primary:hover {
+  opacity: 0.96;
+  box-shadow: 0 18px 38px rgba(0, 31, 102, 0.26);
+}
+
+/* Disabled */
+.brand-page .btn.disabled,
+.brand-page .btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* 우측 CTA 영역 버튼은 가로 100% */
+.bcFlowActions__actions .btn {
+  width: 100%;
+}
+
+/* =========================================================
+   ✅ 추가: "완료한 브랜드 리포트 보기" hover 툴팁
+   - disabled 속성 없이도 hover 가능
+========================================================= */
+
+/* 버튼 기준점 */
+.bcTooltipBtn {
+  position: relative;
+}
+
+/* 가짜 disabled */
+.bcTooltipBtn.is-disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* 툴팁 */
+.bcTooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px); /* ✅ 버튼 아래로 */
+  transform: translateX(-50%) translateY(-6px);
+  white-space: nowrap;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 900;
+
+  background: rgba(17, 24, 39, 0.92);
+  color: #fff;
+
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.15s ease,
+    transform 0.15s ease;
+  z-index: 50;
+}
+
+.bcTooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -6px; /* ✅ 툴팁 상단에 꼬리 */
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: rgba(17, 24, 39, 0.92);
+  rotate: 45deg;
+  border-radius: 2px;
+}
+
+/* ✅ 비활성 상태에서 hover 시 툴팁 표시 */
+.bcTooltipBtn.is-disabled:hover .bcTooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.bcFlowActions {
+  overflow: visible; /* ✅ 툴팁이 카드 밖으로 나와도 안 잘리게 */
+}

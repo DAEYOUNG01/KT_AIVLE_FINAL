@@ -1,0 +1,185 @@
+/* src/styles/EasyLogin.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+:root {
+  --navy: #001f66;
+  --blue: #1766e5;
+  --text: #111827;
+  --muted: #8a90a3;
+  --line: #d9deea;
+  --panel: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  color: var(--text);
+  background: #f5f6fb;
+}
+
+.easy-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.easy-card {
+  width: min(440px, 92vw);
+  margin: 56px auto 32px;
+  background: var(--panel);
+  border: 1px solid #eef1f6;
+  border-radius: 18px;
+  padding: 32px 28px 24px;
+  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.08);
+}
+
+.easy-head {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.easy-title {
+  margin: 0 0 8px;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+.easy-subtitle {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.easy-providers {
+  display: grid;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.provider-btn {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  transition: transform 0.06s ease, box-shadow 0.12s ease, border-color 0.12s;
+}
+
+.provider-btn:hover {
+  border-color: #b9cffc;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
+}
+
+.provider-btn:active {
+  transform: translateY(1px);
+}
+
+.provider-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.provider-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(0, 31, 102, 0.08);
+  border: 1px solid rgba(0, 31, 102, 0.12);
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.provider-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.provider-right {
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 800;
+  padding-left: 8px;
+}
+
+.easy-divider {
+  height: 1px;
+  background: #eef1f6;
+  margin: 18px 0 14px;
+}
+
+.easy-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.easy-secondary {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 0;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.easy-ghost {
+  border: 1px solid #d9deea;
+  border-radius: 10px;
+  padding: 12px 0;
+  background: #fff;
+  color: #4f5665;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.easy-secondary:disabled,
+.easy-ghost:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.easy-footnote {
+  margin: 14px 0 0;
+  font-size: 11px;
+  color: #9aa1b2;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.easy-footer {
+  background: var(--navy);
+  color: #e7ecf7;
+  padding: 18px 24px 22px;
+  font-size: 12px;
+}
+
+.footer-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .easy-card {
+    margin: 32px auto 24px;
+    padding: 26px 20px 20px;
+  }
+}

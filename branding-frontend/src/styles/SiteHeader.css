@@ -1,0 +1,390 @@
+/* src/styles/SiteHeader.css
+   ✅ 컨설팅 서비스 톤에 맞춰: 라이트/미니멀 헤더 + 선명한 정보 구조
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap");
+
+/* ===== Header ===== */
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-bottom: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.06);
+
+  color: var(--ui-ink, #0f172a);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 14px 26px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+  user-select: none;
+  color: var(--ui-brand, #001f66);
+}
+
+.main-nav,
+.account-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-link {
+  border: none;
+  background: transparent;
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  padding: 9px 10px;
+  border-radius: 12px;
+  transition:
+    background 0.12s ease,
+    color 0.12s ease,
+    transform 0.08s ease;
+}
+
+.nav-link:hover {
+  background: rgba(37, 99, 235, 0.06);
+  color: var(--ui-ink, #0f172a);
+}
+
+.nav-link:active {
+  transform: translateY(1px);
+}
+
+.nav-link.is-active {
+  background: rgba(0, 31, 102, 0.08);
+  color: var(--ui-ink, #0f172a);
+}
+
+/* ===== Dropdown ===== */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-dropdown__chev {
+  font-size: 12px;
+  opacity: 0.8;
+  transition: transform 0.18s ease;
+}
+
+.nav-dropdown.is-open .nav-dropdown__chev {
+  transform: rotate(180deg);
+}
+
+.nav-dropdown__panel {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 240px;
+
+  background: var(--ui-surface, #ffffff);
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  border-radius: 14px;
+  padding: 8px;
+  box-shadow: var(--ui-shadow-lg, 0 18px 44px rgba(15, 23, 42, 0.12));
+
+  display: grid;
+  gap: 6px;
+  z-index: 50;
+
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(4px) scale(0.98);
+  transform-origin: top left;
+  transition:
+    opacity 0.16s ease,
+    transform 0.16s ease,
+    visibility 0.16s ease;
+}
+
+.nav-dropdown.is-open .nav-dropdown__panel {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.nav-dropdown__item {
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: left;
+  padding: 10px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--ui-ink, #0f172a);
+  transition:
+    background 0.12s ease,
+    border-color 0.12s ease,
+    transform 0.08s ease,
+    box-shadow 0.12s ease;
+}
+
+.nav-dropdown__item:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.22);
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.12);
+  transform: translateY(-1px);
+}
+
+.nav-dropdown__item:active {
+  transform: translateY(0);
+}
+
+.nav-dropdown__hint,
+.nav-dropdown__section-title {
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.55);
+  padding: 6px 10px 4px;
+  letter-spacing: 0.03em;
+}
+
+.nav-dropdown__divider {
+  height: 1px;
+  background: rgba(15, 23, 42, 0.1);
+  border-radius: 999px;
+  margin: 6px 4px;
+}
+
+.nav-dropdown__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 2px;
+}
+
+.nav-dropdown__item--mini {
+  padding: 10px 10px;
+  font-size: 12px;
+  text-align: center;
+  background: rgba(15, 23, 42, 0.03);
+  border-color: rgba(15, 23, 42, 0.08);
+  line-height: 1.25;
+}
+
+.nav-dropdown__item--mini:hover {
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.22);
+}
+
+/* 홍보물 드롭다운 전용 톤 */
+.nav-dropdown__panel--promo {
+  min-width: 300px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(0, 31, 102, 0.16), rgba(37, 99, 235, 0.1))
+      border-box;
+}
+
+.nav-dropdown__panel--promo .nav-dropdown__section-title {
+  margin: 2px 2px 0;
+  padding: 8px 10px 4px;
+}
+/* =========================================================
+   ✅ Brand Dropdown: "프로세스 안내(비클릭)" + CTA만 클릭
+   ========================================================= */
+.nav-dropdown__panel--brand {
+  min-width: 360px;
+  padding: 0;
+
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, rgba(0, 31, 102, 0.18), rgba(37, 99, 235, 0.12))
+      border-box;
+
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.brand-dd {
+  padding: 14px 14px 12px;
+  display: grid;
+  gap: 12px;
+}
+
+.brand-dd__head {
+  padding: 6px 6px 0;
+}
+
+.brand-dd__badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+  padding: 5px 9px;
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+
+  color: rgba(0, 31, 102, 0.9);
+  background: rgba(0, 31, 102, 0.08);
+  border: 1px solid rgba(0, 31, 102, 0.12);
+}
+
+.brand-dd__title {
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.92);
+  letter-spacing: -0.01em;
+}
+
+.brand-dd__sub {
+  margin-top: 4px;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.55);
+  line-height: 1.4;
+}
+
+/* ✅ 단계는 "설명용"이라 마우스 반응 자체를 제거 */
+.brand-dd__process {
+  position: relative;
+  padding: 10px;
+  border-radius: 16px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.05) 0%,
+    rgba(15, 23, 42, 0.02) 100%
+  );
+  border: 1px solid rgba(15, 23, 42, 0.09);
+}
+
+/* 단계 영역 전체 비인터랙션 */
+.brand-dd__process,
+.brand-dd__process * {
+  pointer-events: none;
+  cursor: default;
+}
+
+.brand-dd__steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 7px;
+}
+
+.brand-dd__step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  align-items: center;
+  gap: 10px;
+
+  padding: 8px 10px;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+
+  user-select: none;
+}
+
+.brand-dd__step-no {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 24px;
+  min-width: 32px;
+  padding: 0 8px;
+  border-radius: 999px;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+
+  color: rgba(255, 255, 255, 0.98);
+  background: linear-gradient(135deg, #001f66 0%, #2563eb 100%);
+  box-shadow: 0 6px 12px rgba(0, 31, 102, 0.2);
+}
+
+.brand-dd__step-name {
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.9);
+  letter-spacing: -0.01em;
+}
+
+/* Note */
+.brand-dd__note {
+  padding: 0 6px;
+  font-size: 11px;
+  font-weight: 800;
+  color: rgba(15, 23, 42, 0.5);
+  line-height: 1.35;
+}
+
+/* CTA: 클릭은 여기만 유도 */
+.brand-dd__cta {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  padding: 12px 12px;
+  border-radius: 14px;
+
+  font-size: 13px;
+  font-weight: 900;
+  color: #fff;
+
+  background: linear-gradient(135deg, #001f66 0%, #2563eb 100%);
+  box-shadow: 0 12px 22px rgba(0, 31, 102, 0.18);
+
+  transition:
+    transform 0.08s ease,
+    filter 0.12s ease;
+}
+
+.brand-dd__cta:hover {
+  filter: brightness(1.03);
+}
+
+.brand-dd__cta:active {
+  transform: translateY(1px);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+  .main-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 14px 18px;
+  }
+
+  .main-nav,
+  .account-nav {
+    gap: 8px;
+  }
+}

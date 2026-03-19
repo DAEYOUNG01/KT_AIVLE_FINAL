@@ -1,0 +1,786 @@
+/* src/styles/MyPage.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+/*
+  ✅ 마이페이지 전용 스타일 (전역 CSS 충돌 방지)
+  - 모든 규칙을 .mypage-page 하위로 스코프
+  - 다른 페이지와 동일한 라이트 배경(#f6f7fb) + 화이트 카드 톤
+  - 브랜드 결과 카드는 로고(이니셜/이미지) 포함 + 투자게시판 느낌의 카드 UI
+*/
+
+.mypage-page {
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+  background: #f6f7fb;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #0f172a;
+}
+
+.mypage-page .mypage-content {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 26px 0 56px;
+}
+
+/* ---- 상단 히어로 ---- */
+.mypage-page .mypage-hero {
+  position: relative;
+  border-radius: 20px;
+  padding: 18px 18px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.08);
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+
+/* subtle accent */
+.mypage-page .mypage-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(23, 102, 229, 0.12) 0%,
+    rgba(255, 255, 255, 0) 45%,
+    rgba(0, 31, 102, 0.06) 100%
+  );
+  pointer-events: none;
+}
+
+.mypage-page .mypage-headerRow {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.mypage-page .mypage-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: #0f172a;
+}
+
+.mypage-page .mypage-sub {
+  margin: 8px 0 0;
+  color: rgba(15, 23, 42, 0.72);
+  line-height: 1.5;
+}
+
+.mypage-page .mypage-headerActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---- 마이페이지 공통 카드 ---- */
+.mypage-page .mypage-card {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  margin-bottom: 14px;
+}
+
+/* ---- 버튼/입력 (마이페이지 내부에서만 오버라이드) ---- */
+.mypage-page .btn {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.mypage-page .btn:hover {
+  background: rgba(23, 102, 229, 0.06);
+  border-color: rgba(23, 102, 229, 0.35);
+}
+
+.mypage-page .btn.ghost {
+  background: transparent;
+}
+
+.mypage-page .btn.primary {
+  background: #1766e5;
+  border-color: #1766e5;
+  color: #ffffff;
+}
+
+.mypage-page .btn.primary:hover {
+  opacity: 0.92;
+}
+
+.mypage-page .btn.danger {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: rgba(239, 68, 68, 0.95);
+}
+
+.mypage-page input,
+.mypage-page select {
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  color: #0f172a;
+}
+
+.mypage-page input::placeholder {
+  color: rgba(15, 23, 42, 0.42);
+}
+
+.mypage-page input:focus,
+.mypage-page select:focus {
+  outline: none;
+  border-color: rgba(23, 102, 229, 0.6);
+  box-shadow: 0 0 0 3px rgba(23, 102, 229, 0.14);
+}
+
+/* ============================================================
+   ✅ 프로필 카드
+   ============================================================ */
+
+.mypage-page .myprofileCard {
+  padding: 0;
+  overflow: hidden;
+}
+
+.mypage-page .myprofileBanner {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(23, 102, 229, 0.12) 0%,
+    rgba(255, 255, 255, 0.7) 55%,
+    rgba(0, 31, 102, 0.06) 100%
+  );
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.mypage-page .myprofileLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.mypage-page .myprofileAvatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #1766e5 0%, #001f66 100%);
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  box-shadow: 0 14px 26px rgba(15, 23, 42, 0.14);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18px;
+  user-select: none;
+  color: #ffffff;
+}
+
+.mypage-page .myprofileText {
+  min-width: 0;
+}
+
+.mypage-page .myprofileNameRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.mypage-page .myprofileName {
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.mypage-page .myprofileId {
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.72);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.mypage-page .myprofileBio {
+  margin-top: 6px;
+  color: rgba(15, 23, 42, 0.72);
+  font-size: 13px;
+  line-height: 1.45;
+  max-width: 740px;
+}
+
+.mypage-page .myprofileChips {
+  margin-top: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mypage-page .myprofileActions {
+  display: flex;
+  align-items: flex-start;
+  flex-shrink: 0;
+}
+
+.mypage-page .myprofileEdit {
+  padding: 14px 16px 16px;
+  display: grid;
+  gap: 12px;
+  background: #ffffff;
+}
+
+.mypage-page .myprofileField label {
+  display: block;
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.64);
+}
+
+.mypage-page .myprofileField input {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  padding: 0 12px;
+}
+
+@media (max-width: 640px) {
+  .mypage-page .myprofileBanner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .mypage-page .myprofileLeft {
+    align-items: flex-start;
+  }
+  .mypage-page .myprofileActions {
+    justify-content: flex-end;
+  }
+}
+
+/* ============================================================
+   ✅ 탭 / 검색 / 빈상태
+   ============================================================ */
+
+.mypage-page .myhub-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.mypage-page .myhub-tab {
+  flex: 1;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 999px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(15, 23, 42, 0.76);
+}
+
+.mypage-page .myhub-tab.is-active {
+  background: #1766e5;
+  box-shadow: 0 12px 22px rgba(23, 102, 229, 0.22);
+  color: #ffffff;
+}
+
+.mypage-page .myhub-count {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.7);
+}
+
+.mypage-page .myhub-tab.is-active .myhub-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.mypage-page .myhub-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.mypage-page .myhub-search {
+  flex: 1;
+  min-width: 220px;
+}
+
+.mypage-page .myhub-search input {
+  width: 100%;
+  height: 44px;
+  border-radius: 12px;
+  padding: 0 12px;
+}
+
+.mypage-page .myhub-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.mypage-page .myhub-right select {
+  height: 44px;
+  border-radius: 12px;
+  padding: 0 10px;
+}
+
+.mypage-page .myhub-empty {
+  margin-top: 14px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px dashed rgba(15, 23, 42, 0.22);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.mypage-page .myhub-empty-title {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.mypage-page .myhub-empty-sub {
+  margin: 6px 0 0;
+  color: rgba(15, 23, 42, 0.68);
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  .mypage-page .myhub-empty {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/* ============================================================
+   ✅ 리포트 카드 (로고 포함)
+   ============================================================ */
+
+.mypage-page .reportStack {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mypage-page .reportCard {
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  background: #ffffff;
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+  padding: 16px;
+  cursor: pointer;
+  transition:
+    transform 0.14s ease,
+    border-color 0.14s ease,
+    background 0.14s ease;
+}
+
+.mypage-page .reportCard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(23, 102, 229, 0.45);
+  background: rgba(23, 102, 229, 0.03);
+}
+
+.mypage-page .reportCard.is-dummy {
+  border-style: dashed;
+}
+
+.mypage-page .reportCard__grid {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.mypage-page .reportLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 18px;
+  color: #ffffff;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  box-shadow: 0 14px 24px rgba(15, 23, 42, 0.14);
+}
+
+.mypage-page .reportLogo.hasImage {
+  background: #ffffff;
+}
+
+.mypage-page .reportLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mypage-page .reportLogoText {
+  letter-spacing: 0.02em;
+}
+
+/* 로고 배경 팔레트 (이니셜용) */
+.mypage-page .reportLogo.variant-0 {
+  background: linear-gradient(135deg, #1766e5 0%, #001f66 100%);
+}
+.mypage-page .reportLogo.variant-1 {
+  background: linear-gradient(135deg, #6d28d9 0%, #1d4ed8 100%);
+}
+.mypage-page .reportLogo.variant-2 {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%);
+}
+.mypage-page .reportLogo.variant-3 {
+  background: linear-gradient(135deg, #22c55e 0%, #065f46 100%);
+}
+.mypage-page .reportLogo.variant-4 {
+  background: linear-gradient(135deg, #f59e0b 0%, #92400e 100%);
+}
+.mypage-page .reportLogo.variant-5 {
+  background: linear-gradient(135deg, #ef4444 0%, #991b1b 100%);
+}
+
+.mypage-page .reportInfo {
+  min-width: 0;
+}
+
+.mypage-page .reportTitleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mypage-page .reportCard__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mypage-page .reportCard__sub {
+  margin: 6px 0 0;
+  color: rgba(15, 23, 42, 0.7);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.mypage-page .reportMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.mypage-page .metaChip {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.06);
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.76);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.mypage-page .metaChip.ghost {
+  background: rgba(15, 23, 42, 0.04);
+  color: rgba(15, 23, 42, 0.62);
+}
+
+.mypage-page .pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  background: rgba(15, 23, 42, 0.06);
+  color: rgba(15, 23, 42, 0.76);
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  white-space: nowrap;
+}
+
+.mypage-page .pill.ghost {
+  background: rgba(15, 23, 42, 0.04);
+  color: rgba(15, 23, 42, 0.62);
+}
+
+.mypage-page .pill.dummy {
+  background: rgba(245, 158, 11, 0.14);
+  border-color: rgba(245, 158, 11, 0.34);
+  color: rgba(146, 64, 14, 0.95);
+  font-weight: 900;
+}
+
+.mypage-page .pill.complete {
+  background: rgba(34, 197, 94, 0.14);
+  border-color: rgba(34, 197, 94, 0.34);
+  color: rgba(22, 101, 52, 0.95);
+  font-weight: 900;
+}
+
+.mypage-page .pill.incomplete {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.32);
+  color: rgba(30, 64, 175, 0.95);
+  font-weight: 900;
+}
+
+.mypage-page .reportTitleBadges {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mypage-page .reportProgress {
+  margin-top: 10px;
+}
+
+.mypage-page .reportProgress__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  color: rgba(15, 23, 42, 0.7);
+  font-size: 12px;
+}
+
+.mypage-page .reportProgress__label {
+  font-weight: 800;
+}
+
+.mypage-page .reportProgress__bar {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+}
+
+.mypage-page .reportProgress__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.35);
+}
+
+.mypage-page .reportPreviewChips {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mypage-page .previewChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.03);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  max-width: 100%;
+}
+
+.mypage-page .previewChip__k {
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(15, 23, 42, 0.52);
+  white-space: nowrap;
+}
+
+.mypage-page .previewChip__v {
+  font-size: 12px;
+  font-weight: 900;
+  color: #0f172a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .mypage-page .reportCard__grid {
+    grid-template-columns: 56px 1fr;
+  }
+}
+
+/* ============================================================
+   ✅ 계정관리 섹션
+   ============================================================ */
+
+.mypage-page .cardTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.mypage-page .cardTitleRow h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.mypage-page .btnRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ---- 마이페이지 힌트/에러 ---- */
+.mypage-page .myhub-hint {
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  color: rgba(15, 23, 42, 0.78);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mypage-page .myhub-hint.danger {
+  background: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.22);
+  color: rgba(127, 29, 29, 0.95);
+}
+
+/* ---- 카드 우측 액션 버튼(삭제) ---- */
+.mypage-page .btn.btn-sm {
+  height: 34px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.mypage-page .deleteBtn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.mypage-page .deleteBtn.is-busy {
+  opacity: 0.75;
+}
+
+.mypage-page .btn.btn-sm:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* --- 버튼 레이아웃 및 정렬 수정 --- */
+
+/* 1. 공통 버튼 기본기능 강화 */
+.mypage-page .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px; 
+  min-height: 40px;    
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap; 
+  transition: all 0.2s ease;
+}
+
+/* 2. 상단 '홈으로', '컨설팅 시작' 버튼 정렬 */
+.mypage-page .mypage-headerActions {
+  display: flex;
+  gap: 10px;
+  align-items: center; /* 세로축 중앙 정렬 */
+}
+
+/* 3. '프로필 편집' 버튼 영역 */
+.mypage-page .myprofileActions {
+  display: flex;
+  align-items: center; 
+  align-self: flex-start; /* 부모가 flex일 때 늘어남 방지 */
+}
+
+/* 4. '최신순' 셀렉트박스와 '새로 만들기' 버튼 정렬 */
+.mypage-page .myhub-right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* 5. 리포트 카드 내부의 '리포트 보기' 버튼 */
+.mypage-page .reportCTA {
+  display: flex;
+  align-items: center; 
+  justify-content: flex-end; /* 오른쪽 정렬 유지 */
+}
+
+.mypage-page .reportCTA .btn {
+  height: 44px;
+  padding: 0 20px;
+}
+
+/* 6. 모바일(반응형)에서 버튼이 겹치지 않게 수정 */
+@media (max-width: 720px) {
+  .mypage-page .reportCard__grid {
+    grid-template-columns: 56px 1fr; /* 레이아웃 유지 */
+  }
+  .mypage-page .reportCTA {
+    grid-column: 1 / -1; 
+    margin-top: 12px;
+  }
+  .mypage-page .reportCTA .btn {
+    width: 100%; /* 모바일에서는 터치하기 편하게 꽉 채움 */
+  }
+}
+
+.reportTitleBadges {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* 작은 버튼(이미 쓰고 있으면 생략 가능) */
+.btn.btn-sm {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+}

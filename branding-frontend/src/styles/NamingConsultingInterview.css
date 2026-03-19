@@ -1,0 +1,1175 @@
+/* src/styles/NamingConsultingInterview.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+.diagInterview.consultingInterview {
+  min-height: 100vh;
+  background: var(--ui-bg, #f6f7fb);
+  display: flex;
+  flex-direction: column;
+}
+
+.diagInterview.consultingInterview .diagInterview__main {
+  flex: 1;
+  padding: 28px 24px 60px;
+}
+
+.diagInterview.consultingInterview .diagInterview__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.diagInterview.consultingInterview .diagInterview__titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.diagInterview.consultingInterview .diagInterview__title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.diagInterview.consultingInterview .diagInterview__sub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #5b6476;
+}
+
+.diagInterview.consultingInterview .diagInterview__topActions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.diagInterview.consultingInterview .diagInterview__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 18px;
+  align-items: start;
+}
+
+.diagInterview.consultingInterview .diagInterview__left {
+  display: grid;
+  gap: 14px;
+}
+
+.diagInterview.consultingInterview .card {
+  background: #fff;
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--ui-shadow-md, 0 14px 34px rgba(15, 23, 42, 0.08));
+}
+
+.diagInterview.consultingInterview .card__head h2 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.diagInterview.consultingInterview .card__head p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #5b6476;
+}
+
+.diagInterview.consultingInterview .formGrid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.diagInterview.consultingInterview .field {
+  display: grid;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+/* 질문 1개 = 1카드 */
+.diagInterview.consultingInterview .questionCard .field {
+  margin-top: 0;
+}
+
+.diagInterview.consultingInterview .questionCard {
+  padding: 14px 16px;
+}
+
+.diagInterview.consultingInterview .field label {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.diagInterview.consultingInterview .req {
+  color: var(--ui-accent, #2563eb);
+  margin-left: 4px;
+}
+
+.diagInterview.consultingInterview .field input,
+.diagInterview.consultingInterview .field select,
+.diagInterview.consultingInterview .field textarea {
+  width: 100%;
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  outline: none;
+  background: #fff;
+  color: #0f172a;
+}
+
+.diagInterview.consultingInterview .selectWrap {
+  position: relative;
+}
+
+.diagInterview.consultingInterview .selectWrap::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(71, 85, 105, 0.9);
+  font-size: 12px;
+  font-weight: 900;
+  pointer-events: none;
+}
+
+.diagInterview.consultingInterview .selectWrap select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: 34px;
+  background: #fff;
+}
+
+.diagInterview.consultingInterview .field textarea {
+  resize: vertical;
+}
+
+.diagInterview.consultingInterview .field input:focus,
+.diagInterview.consultingInterview .field select:focus,
+.diagInterview.consultingInterview .field textarea:focus {
+  border-color: rgba(37, 99, 235, 0.55);
+  box-shadow: var(--ui-focus, 0 0 0 3px rgba(37, 99, 235, 0.18));
+}
+
+.diagInterview.consultingInterview .helper {
+  font-size: 12px;
+  color: #5b6476;
+}
+
+.diagInterview.consultingInterview .bottomBar {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.diagInterview.consultingInterview .btn {
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  background: #fff;
+  color: #0f172a;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.diagInterview.consultingInterview .btn:hover {
+  border-color: rgba(23, 102, 229, 0.45);
+}
+
+.diagInterview.consultingInterview .btn.ghost {
+  background: transparent;
+}
+
+.diagInterview.consultingInterview .btn.primary {
+  background: var(--ui-brand, #001f66);
+  color: #fff;
+  border-color: var(--ui-brand, #001f66);
+}
+
+.diagInterview.consultingInterview .btn.primary:hover {
+  opacity: 0.92;
+}
+
+.diagInterview.consultingInterview .btn.disabled,
+.diagInterview.consultingInterview .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ✅ 오른쪽 영역: sticky 안정화 */
+.diagInterview.consultingInterview .diagInterview__right {
+  position: sticky;
+  top: 92px;
+  align-self: start; /* ✅ grid에서 sticky가 더 안정적으로 동작 */
+  height: fit-content;
+}
+
+/* ✅ 여기만 “스크롤 따라오기” 핵심 */
+.diagInterview.consultingInterview .sideCard {
+  position: static;
+  top: 92px; /* ✅ 헤더 높이만큼 여유(필요하면 80~110 사이로 조절) */
+  background: #fff;
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: var(--ui-shadow-md, 0 14px 34px rgba(15, 23, 42, 0.08));
+}
+
+.diagInterview.consultingInterview .sideCard__titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diagInterview.consultingInterview .sideCard h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.diagInterview.consultingInterview .badge {
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--ui-accent, #2563eb);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.diagInterview.consultingInterview .progressBar {
+  margin-top: 10px;
+  height: 10px;
+  background: #eef1f7;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.diagInterview.consultingInterview .progressBar__fill {
+  height: 100%;
+  background: var(--ui-accent, #2563eb);
+  width: 0%;
+  transition: width 0.25s ease;
+}
+
+.diagInterview.consultingInterview .sideMeta {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.diagInterview.consultingInterview .sideMeta__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #5b6476;
+}
+
+.diagInterview.consultingInterview .sideMeta__row .v {
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.diagInterview.consultingInterview .saveMsg {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: var(--ui-accent, #2563eb);
+  font-weight: 700;
+}
+
+.diagInterview.consultingInterview .divider {
+  height: 1px;
+  background: #e6e9f1;
+  margin: 14px 0;
+}
+
+.diagInterview.consultingInterview .sideSubTitle {
+  margin: 0 0 10px;
+  font-size: 12px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.diagInterview.consultingInterview .checkList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.diagInterview.consultingInterview .checkList li {
+  font-size: 12px;
+  color: #5b6476;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.diagInterview.consultingInterview .checkList li::after {
+  content: "•";
+  color: #c4cad8;
+}
+
+.diagInterview.consultingInterview .checkList li.ok {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+.diagInterview.consultingInterview .checkList li.ok::after {
+  content: "✓";
+  color: var(--ui-accent, #2563eb);
+  font-weight: 900;
+}
+
+.diagInterview.consultingInterview .jumpGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.diagInterview.consultingInterview .jumpBtn {
+  border: 1px solid var(--ui-line, rgba(15, 23, 42, 0.1));
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px 10px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.diagInterview.consultingInterview .jumpBtn:hover {
+  border-color: rgba(23, 102, 229, 0.45);
+}
+
+.diagInterview.consultingInterview .sideAnalyze {
+  margin-top: 12px;
+  width: 100%;
+}
+
+.diagInterview.consultingInterview .hint {
+  margin: 10px 0 0;
+  font-size: 12px;
+  color: #5b6476;
+}
+
+@media (max-width: 980px) {
+  .diagInterview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ✅ sticky 해제 금지(모바일에서도 따라오게 유지) */
+  .sideCard {
+    position: sticky;
+    top: 14px;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bottomBar {
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .bottomBar .btn {
+    flex: 1;
+  }
+}
+
+/* =========================
+   Candidate 3 options UI
+   ========================= */
+.diagInterview.consultingInterview .candidateList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.diagInterview.consultingInterview .candidateCard {
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.6);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    border-color 160ms ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.diagInterview.consultingInterview .candidateCard:hover {
+  transform: translateY(-1px);
+  border-color: rgba(37, 99, 235, 0.34);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.1);
+}
+
+.diagInterview.consultingInterview .candidateCard:focus {
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.14),
+    0 12px 26px rgba(15, 23, 42, 0.1);
+}
+
+.diagInterview.consultingInterview .candidateCard.selected {
+  border-color: rgba(37, 99, 235, 0.44);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.12);
+}
+
+.diagInterview.consultingInterview .candidateHead {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.diagInterview.consultingInterview .candidateTitle {
+  font-weight: 900;
+  font-size: 15px;
+  color: #0f172a;
+}
+
+.diagInterview.consultingInterview .candidateBadge {
+  font-size: 12px;
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.75);
+  white-space: nowrap;
+}
+
+.diagInterview.consultingInterview .candidateCard.selected .candidateBadge {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.34);
+  color: rgba(30, 64, 175, 0.95);
+}
+
+.diagInterview.consultingInterview .candidateSections {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: minmax(210px, 0.92fr) minmax(0, 1.4fr);
+  gap: 10px;
+}
+
+.diagInterview.consultingInterview .candidateSection {
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 10px 12px;
+}
+
+.diagInterview.consultingInterview .candidateSection--content {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.92),
+    rgba(248, 250, 252, 0.92)
+  );
+}
+
+.diagInterview.consultingInterview .candidateSectionLabel {
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  color: rgba(30, 64, 175, 0.96);
+  margin-bottom: 6px;
+}
+
+.diagInterview.consultingInterview .candidateSectionText {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(15, 23, 42, 0.92);
+  white-space: pre-wrap;
+}
+
+.diagInterview.consultingInterview
+  .candidateSectionText
+  + .candidateSectionText {
+  margin-top: 6px;
+}
+
+.diagInterview.consultingInterview .candidateSectionText.muted {
+  color: rgba(71, 85, 105, 0.9);
+}
+
+.diagInterview.consultingInterview .candidateDetailItem {
+  font-size: 13px;
+  color: rgba(15, 23, 42, 0.88);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 840px) {
+  .diagInterview.consultingInterview .candidateSections {
+    grid-template-columns: 1fr;
+  }
+}
+
+.diagInterview.consultingInterview .candidateActions {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.diagInterview.consultingInterview .candidateBody {
+  margin-top: 10px;
+  font-size: 13px;
+  opacity: 0.92;
+  white-space: pre-wrap;
+  line-height: 1.55;
+  color: rgba(15, 23, 42, 0.9);
+}
+
+.diagInterview.consultingInterview .candidateBody.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.diagInterview.consultingInterview .candidateMore {
+  margin-top: 8px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(29, 78, 216, 0.95);
+  cursor: pointer;
+}
+
+.diagInterview.consultingInterview .aiToast {
+  position: fixed;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  width: min(86vw, 660px);
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(15, 23, 42, 0.82);
+  color: #fff;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.26);
+  z-index: 1200;
+}
+
+.diagInterview.consultingInterview .aiToast.warn {
+  background: rgba(153, 27, 27, 0.96);
+  border-color: rgba(127, 29, 29, 0.95);
+}
+
+.diagInterview.consultingInterview .aiToast__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.diagInterview.consultingInterview .aiToast__icon {
+  font-size: 17px;
+  line-height: 1;
+}
+
+.diagInterview.consultingInterview .aiToast__msg {
+  margin: 6px 0 0;
+  font-size: 14px;
+  font-weight: 650;
+  line-height: 1.45;
+  opacity: 0.98;
+}
+
+.diagInterview.consultingInterview .aiInlineError {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  font-size: 12px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.diagInterview.consultingInterview .card.aiError {
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== 필수 입력 가이드 UI ===== */
+.requiredAlert {
+  margin-top: 10px;
+  border-radius: 12px;
+  padding: 12px 12px 10px;
+  border: 1px solid rgba(120, 131, 155, 0.35);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.95),
+    rgba(247, 249, 255, 0.92)
+  );
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.requiredAlert.show.warn {
+  border-color: rgba(236, 72, 72, 0.55);
+  box-shadow: 0 0 0 3px rgba(236, 72, 72, 0.12);
+  transform: translateY(-1px);
+}
+
+.requiredAlert.done {
+  border-color: rgba(22, 163, 74, 0.4);
+  background: linear-gradient(
+    180deg,
+    rgba(243, 255, 247, 0.96),
+    rgba(234, 252, 239, 0.93)
+  );
+}
+
+.requiredAlert__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #1e293b;
+}
+
+.requiredAlert .stateIcon {
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: #ef4444;
+  flex: 0 0 20px;
+}
+
+.requiredAlert.done .stateIcon {
+  background: #16a34a;
+}
+
+.requiredAlert__okText {
+  margin: 8px 0 0;
+  font-size: 12px;
+  color: #166534;
+  line-height: 1.5;
+}
+
+.requiredAlert__list {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: #b42318;
+}
+
+.requiredCheckList {
+  margin-top: 10px;
+  border: 1px solid rgba(120, 131, 155, 0.28);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 8px 10px;
+}
+
+.requiredCheckList ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.requiredCheckList li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 12px;
+  line-height: 1.35;
+  color: #475569;
+}
+
+.requiredCheckList li .dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 18px;
+  font-size: 11px;
+  font-weight: 700;
+  background: #e2e8f0;
+  color: #475569;
+}
+
+.requiredCheckList li.ok {
+  color: #166534;
+}
+
+.requiredCheckList li.ok .dot {
+  background: rgba(22, 163, 74, 0.2);
+  color: #15803d;
+}
+
+.requiredCheckList li.miss {
+  color: #9f1239;
+}
+
+.requiredCheckList li.miss .dot {
+  background: rgba(225, 29, 72, 0.14);
+  color: #be123c;
+}
+
+.btn.primary.attention {
+  animation: pulseWarn 1.1s ease-in-out infinite;
+}
+
+@keyframes pulseWarn {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.42);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
+  }
+}
+
+/* ===== Bottom loading toast + button spinner ===== */
+@keyframes aiSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.diagInterview.consultingInterview .aiToast.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 4px;
+  background: rgba(37, 99, 235, 0.96);
+  border: 1px solid rgba(37, 99, 235, 0.85);
+  box-shadow: 0 10px 28px rgba(37, 99, 235, 0.28);
+}
+
+.diagInterview.consultingInterview .aiToast__loadingWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.diagInterview.consultingInterview .aiToast__spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.92);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: aiSpin 0.8s linear infinite;
+  flex: 0 0 auto;
+}
+
+.diagInterview.consultingInterview .aiToast__timer {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
+.diagInterview.consultingInterview .sideAnalyze.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.diagInterview.consultingInterview .btnInlineSpinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: aiSpin 0.8s linear infinite;
+  flex: 0 0 auto;
+}
+
+/* ===== Naming loading card design upgrade ===== */
+.diagInterview.consultingInterview .namingLoadingCard {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(239, 246, 255, 0.96) 100%
+  );
+  box-shadow:
+    0 10px 28px rgba(30, 64, 175, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__glow {
+  position: absolute;
+  right: -80px;
+  top: -72px;
+  width: 220px;
+  height: 220px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.2) 0%,
+    rgba(59, 130, 246, 0) 72%
+  );
+  pointer-events: none;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(30, 64, 175, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: rgba(30, 64, 175, 0.98);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__elapsed {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(30, 64, 175, 0.92);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  border-radius: 999px;
+  padding: 5px 10px;
+  line-height: 1;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__head h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__spinner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 3px solid rgba(37, 99, 235, 0.28);
+  border-top-color: rgba(37, 99, 235, 0.95);
+  animation: aiSpin 0.9s linear infinite;
+  flex: 0 0 auto;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__desc {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(51, 65, 85, 0.95);
+  font-weight: 600;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__steps {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  color: rgba(51, 65, 85, 0.9);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__step.is-active {
+  background: rgba(37, 99, 235, 0.12);
+  border-color: rgba(37, 99, 235, 0.42);
+  color: rgba(30, 64, 175, 0.98);
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__progress {
+  margin-top: 12px;
+  height: 9px;
+  width: 100%;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.14);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  overflow: hidden;
+}
+
+@keyframes namingCardLoad {
+  0% {
+    width: 18%;
+  }
+  45% {
+    width: 62%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__progressFill {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
+  animation: namingCardLoad 1.5s ease-in-out infinite alternate;
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__wait {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  color: rgba(30, 64, 175, 0.94);
+}
+
+.diagInterview.consultingInterview .namingLoadingCard__dots::after {
+  content: "...";
+  display: inline-block;
+  width: 16px;
+  text-align: left;
+  letter-spacing: 2px;
+  animation: namingDots 1s steps(4, end) infinite;
+}
+
+@keyframes namingDots {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .diagInterview.consultingInterview .namingLoadingCard__head h2 {
+    font-size: 20px;
+  }
+
+  .diagInterview.consultingInterview .namingLoadingCard__desc {
+    font-size: 13px;
+  }
+}
+
+/* ===== AI 제안 값 가독성 강화 ===== */
+.diagInterview.consultingInterview .candidateSections.single {
+  margin-top: 12px;
+}
+
+.diagInterview.consultingInterview .candidateSectionLabel--ai {
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: rgba(15, 23, 42, 0.62);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.diagInterview.consultingInterview .candidateAiValue {
+  border-radius: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.98),
+    rgba(241, 245, 255, 0.92)
+  );
+  color: #0f172a;
+  font-size: clamp(20px, 2.8vw, 26px);
+  font-weight: 900;
+  line-height: 1.38;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+.diagInterview.consultingInterview .candidateAiValue.selected {
+  border-color: rgba(37, 99, 235, 0.38);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+.diagInterview.consultingInterview .candidateAiImageWrap {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(37, 99, 235, 0.22);
+  background: #fff;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.1);
+}
+
+.diagInterview.consultingInterview .candidateAiImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* ===== Loading preview cards (컨셉/스토리/로고와 동일 톤) ===== */
+.diagInterview.consultingInterview .candidateList.candidateList--loading {
+  margin-top: 12px;
+}
+
+.diagInterview.consultingInterview .candidateCard.candidateCard--loading {
+  position: relative;
+  overflow: hidden;
+  pointer-events: none;
+  border-color: rgba(148, 163, 184, 0.36);
+  background: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.78) 8%,
+    rgba(241, 245, 249, 0.9) 18%,
+    rgba(255, 255, 255, 0.78) 33%
+  );
+  background-size: 220% 100%;
+  animation: candidateCardShimmer 1.45s linear infinite;
+}
+
+.diagInterview.consultingInterview
+  .candidateCard.candidateCard--loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 88% 18%,
+    rgba(37, 99, 235, 0.12),
+    transparent 42%
+  );
+  pointer-events: none;
+}
+
+.diagInterview.consultingInterview
+  .candidateCard.candidateCard--loading
+  .candidateBadge {
+  color: rgba(30, 64, 175, 0.86);
+  background: rgba(37, 99, 235, 0.08);
+  border-color: rgba(37, 99, 235, 0.22);
+}
+
+.diagInterview.consultingInterview .candidateLoadingLine {
+  position: relative;
+  height: 12px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 9px;
+  background: rgba(148, 163, 184, 0.26);
+  overflow: hidden;
+}
+
+.diagInterview.consultingInterview .candidateLoadingLine::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.78),
+    rgba(255, 255, 255, 0)
+  );
+  animation: loadingLineSweep 1.25s ease-in-out infinite;
+}
+
+.diagInterview.consultingInterview .candidateLoadingLine.lg {
+  width: 95%;
+}
+
+.diagInterview.consultingInterview .candidateLoadingLine.sm {
+  width: 68%;
+}
+
+.diagInterview.consultingInterview .candidateLoadingImage {
+  position: relative;
+  margin-top: 8px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.28);
+  background: rgba(148, 163, 184, 0.24);
+  overflow: hidden;
+}
+
+.diagInterview.consultingInterview .candidateLoadingImage::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.74),
+    rgba(255, 255, 255, 0)
+  );
+  animation: loadingLineSweep 1.2s ease-in-out infinite;
+}
+
+@keyframes candidateCardShimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -20% 0;
+  }
+}
+
+@keyframes loadingLineSweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(140%);
+  }
+}

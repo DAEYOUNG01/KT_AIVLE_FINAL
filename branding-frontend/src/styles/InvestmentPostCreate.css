@@ -1,0 +1,523 @@
+/* src/styles/InvestmentPostCreate.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+
+.invest-create-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background: #f6f7fb;
+  font-family: "Manrope", "Noto Sans KR", sans-serif;
+}
+
+.invest-create-main {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 28px 32px 72px;
+}
+
+.invest-create-hero {
+  background: #f2f4f9;
+  border: 1px solid #e6e9f1;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.invest-create-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.invest-create-sub {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.invest-create-hero-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.invest-create-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 20px;
+}
+
+.invest-create-card {
+  background: #ffffff;
+  border: 1px solid #e6e9f1;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+  display: grid;
+  gap: 14px;
+}
+
+.invest-form-row {
+  display: grid;
+  gap: 8px;
+}
+
+.invest-form-row.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.invest-form-label {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.invest-form-required {
+  margin-left: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.invest-form-label input,
+.invest-form-label select,
+.invest-form-label textarea {
+  border: 1px solid #d7dbe8;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  outline: none;
+  resize: vertical;
+  color: #0f172a;
+  font-family: inherit;
+}
+
+.invest-form-label select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 20 20'%3E%3Cpath fill='%236b7280' d='M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 14px 14px;
+  padding-right: 36px;
+}
+
+.invest-form-label input[type="file"] {
+  padding: 8px;
+  background: #f8fafc;
+}
+
+.invest-form-helper {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: -4px;
+}
+
+.invest-form-error {
+  font-size: 11px;
+  color: #b91c1c;
+}
+
+.invest-draft-text {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #334155;
+}
+
+.invest-draft-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.invest-upload-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.invest-upload-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 6px;
+  display: grid;
+  gap: 6px;
+}
+
+.invest-upload-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.invest-upload-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.invest-upload-name {
+  font-size: 11px;
+  color: #475569;
+  word-break: break-all;
+}
+
+.invest-form-label textarea {
+  min-height: 120px;
+}
+
+.invest-form-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.invest-tag-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.invest-location-select {
+  position: relative;
+  width: 100%;
+}
+
+.invest-location-control {
+  width: 100%;
+  border: 1px solid #d7dbe8;
+  background: #fff;
+  border-radius: 12px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.invest-location-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.invest-location-chips .placeholder {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.invest-location-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #1d4ed8;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.invest-location-chip button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 11px;
+  line-height: 1;
+  color: #1d4ed8;
+  padding: 0;
+}
+
+.invest-location-control .chev {
+  font-size: 14px;
+  color: #6b7280;
+  transition: transform 0.15s ease;
+}
+
+.invest-location-control .chev.is-open {
+  transform: rotate(180deg);
+}
+
+.invest-location-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: #fff;
+  border: 1px solid #d7dbe8;
+  border-radius: 12px;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+}
+
+.invest-location-option {
+  border: 1px solid transparent;
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+  color: #111827;
+}
+
+.invest-location-option.is-selected {
+  border-color: #c7d2fe;
+  background: #eef2ff;
+  color: #1d4ed8;
+  font-weight: 700;
+}
+
+.invest-create-side {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+}
+
+.invest-preview {
+  background: #ffffff;
+  border: 1px solid #e6e9f1;
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+  display: grid;
+  gap: 12px;
+  align-self: start;
+  height: fit-content;
+  min-height: 220px;
+}
+
+.invest-preview-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.invest-preview-logo {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #0f172a;
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  overflow: hidden;
+  flex: 0 0 auto;
+}
+
+.invest-preview-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.invest-preview-text h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.invest-preview-oneliner {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.invest-preview-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.invest-preview-tags .empty {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.invest-preview-tags span:not(.empty) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: #eef2ff;
+  color: #1d4ed8;
+  border: 1px solid #dbeafe;
+  line-height: 1;
+}
+
+.invest-preview-bottom {
+  margin-top: 8px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 13px;
+  color: #1f2937;
+}
+
+.invest-preview--board .invest-preview-bottom {
+  padding-top: 8px;
+}
+
+.invest-preview-meta {
+  display: grid;
+  gap: 4px;
+}
+
+.invest-preview-status {
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.invest-preview-updated {
+  font-size: 11px;
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+.invest-preview-link {
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  border-radius: 12px;
+  width: 36px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.invest-guide {
+  background: #f8fafc;
+  border: 1px dashed #d7dbe8;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.invest-guide h4 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #0f172a;
+}
+
+.invest-guide ul {
+  margin: 0;
+  padding-left: 16px;
+  display: grid;
+  gap: 6px;
+}
+
+@media (max-width: 1080px) {
+  .invest-create-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .invest-create-main {
+    padding: 24px 20px 64px;
+  }
+  .invest-create-hero {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .invest-form-row.two-col {
+    grid-template-columns: 1fr;
+  }
+  .invest-tag-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .invest-radio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .invest-form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* ========================================================= */
+/* 등록/수정 페이지: 버튼 스타일 최종 충돌 해결본 */
+/* ========================================================= */
+
+/* 1. 버튼 기본 레이아웃 (공통) */
+.invest-create-page .btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 42px !important;
+  padding: 0 20px !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  border-radius: 10px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  white-space: nowrap !important;
+}
+
+/* 2. [수정 저장 / 등록하기] 버튼 - 보라색 배경 */
+.invest-create-page .invest-form-actions .btn.primary {
+  background-color: #4f46e5 !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+/* 3. [임시 저장] 버튼 - 회색 배경 (danger가 없는 ghost만!) */
+.invest-create-page .invest-form-actions .btn.ghost:not(.danger) {
+  background-color: #f3f3f3 !important; /* 연한 회색 */
+  color: #475569 !important; /* 슬레이트 글자색 */
+  border: 1px solid #cbd5e1 !important; /* 연한 테두리 */
+}
+
+/* 4. [삭제] 버튼 - 흰색 배경에 빨간 테두리 (danger 전용) */
+.invest-create-page .invest-form-actions .btn.danger {
+  background-color: #ffffff !important;
+  color: #ef4444 !important; /* 빨간색 글씨 */
+  border: 1px solid #fca5a5 !important; /* 연한 빨간 테두리 */
+}
+
+.invest-create-page .invest-form-actions .btn.danger:hover {
+  background-color: #fef2f2 !important;
+  border-color: #ef4444 !important;
+}
+
+/* 5. 상단 [목록으로] 버튼 - 흰색 배경에 보라 테두리 */
+.invest-create-hero-actions .btn.ghost {
+  background-color: #ffffff !important;
+  color: #4f46e5 !important;
+  border: 1px solid #4f46e5 !important;
+}

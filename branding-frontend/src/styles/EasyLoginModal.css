@@ -1,0 +1,234 @@
+/* src/styles/EasyLoginModal.css */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+:root {
+  --navy: #001f66;
+  --blue: #1766e5;
+  --text: #111827;
+  --muted: #8a90a3;
+  --line: #d9deea;
+  --panel: #ffffff;
+}
+
+.easyModal__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 18, 35, 0.55);
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  z-index: 9999;
+}
+
+.easyModal__panel {
+  width: min(460px, 94vw);
+  background: var(--panel);
+  border: 1px solid rgba(238, 241, 246, 0.9);
+  border-radius: 18px;
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+  padding: 20px 18px 16px;
+  animation: easyModalPop 0.14s ease-out;
+}
+
+@keyframes easyModalPop {
+  from {
+    transform: translateY(8px) scale(0.985);
+    opacity: 0.6;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.easyModal__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 6px 10px;
+}
+
+.easyModal__title {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.easyModal__desc {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.easyModal__close {
+  border: 1px solid #e7ebf3;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 900;
+  color: #2b3550;
+}
+
+.easyModal__close:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.easyModal__providers {
+  display: grid;
+  gap: 10px;
+  padding: 8px 6px 2px;
+}
+
+.easyModal__providerBtn {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fff;
+  cursor: pointer;
+  transition:
+    transform 0.06s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s;
+}
+
+.easyModal__providerBtn:hover {
+  border-color: #b9cffc;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.08);
+}
+
+.easyModal__providerBtn:active {
+  transform: translateY(1px);
+}
+
+.easyModal__providerBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.easyModal__icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  border: 1px solid #d5dceb;
+  background: #fff;
+  color: #101828;
+  overflow: hidden;
+}
+
+.easyModal__icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.easyModal__icon--google {
+  background: #fff;
+  border-color: #d9deea;
+}
+
+.easyModal__icon--kakao {
+  background: #fee500;
+  border-color: #f2db00;
+}
+
+.easyModal__icon--kakao svg {
+  width: 24px;
+  height: 24px;
+}
+
+.easyModal__icon--naver {
+  background: #03c75a;
+  border-color: #02b250;
+}
+
+.easyModal__icon--naver svg {
+  width: 22px;
+  height: 22px;
+}
+
+.easyModal__icon--apple {
+  background: #111827;
+  border-color: #111827;
+  color: #fff;
+}
+
+.easyModal__text {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.easyModal__right {
+  font-size: 12px;
+  color: var(--blue);
+  font-weight: 900;
+  padding-left: 8px;
+}
+
+.easyModal__divider {
+  height: 1px;
+  background: #eef1f6;
+  margin: 14px 6px 10px;
+}
+
+.easyModal__bottom {
+  padding: 4px 6px 4px;
+  display: grid;
+  gap: 8px;
+}
+
+.easyModal__ghost {
+  border: 1px solid #d9deea;
+  border-radius: 12px;
+  padding: 11px 0;
+  background: #fff;
+  color: #4f5665;
+  font-weight: 800;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.easyModal__ghost:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.easyModal__footnote {
+  margin: 0;
+  font-size: 11px;
+  color: #9aa1b2;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.easyModal__status {
+  margin: 0;
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #ffe0b2;
+  background: #fff8ee;
+  color: #8a5300;
+  font-size: 12px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* 상단 파란 포인트 라인 제거 (이전 디자인 유지) */
+.easyModal__panel::before {
+  content: none !important;
+  display: none !important;
+}

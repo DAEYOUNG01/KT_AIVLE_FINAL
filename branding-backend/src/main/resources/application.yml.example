@@ -1,0 +1,44 @@
+# =============================================
+# branding-backend application.yml 설정 예시
+# 이 파일을 복사해서 application.yml 파일로 만들고
+# 실제 값을 입력하세요.
+# (로컬 개발 환경용)
+# =============================================
+
+spring:
+  application:
+    name: branding-backend
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/branding
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: your_db_username       # 예: root
+    password: your_db_password       # 예: 1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  sql:
+    init:
+      mode: never
+
+cloud:
+  aws:
+    credentials:
+      access-key: your_aws_access_key      # AWS IAM 액세스 키
+      secret-key: your_aws_secret_key      # AWS IAM 시크릿 키
+    region:
+      static: ap-northeast-2               # 서울 리전 (변경 가능)
+    s3:
+      bucket: your_s3_bucket_name          # S3 버킷 이름
+    stack:
+      auto: false
+
+jwt:
+  secret: your_jwt_secret_key_here         # 최소 32자 이상 권장
+  access-token-expiration: 3600000         # 밀리초 단위 (1시간)
+
+ai:
+  server:
+    base-url: http://localhost:8000        # AI 서버 URL
