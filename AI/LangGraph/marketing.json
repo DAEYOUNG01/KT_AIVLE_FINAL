@@ -1,0 +1,1133 @@
+{
+    "step_6": [
+        {
+            "id": "s6_icon_style",
+            "category": "Style",
+            "question_text": "심볼(로고)의 디자인 스타일은 무엇인가요?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "style_flat",
+                    "text": "단순하고 명료한 2D 플랫 (Flat)",
+                    "value": "Flat 2D"
+                },
+                {
+                    "id": "style_neumorphism",
+                    "text": "부드러운 입체감 (Neumorphism/Emboss)",
+                    "value": "Neumorphism"
+                },
+                {
+                    "id": "style_3d",
+                    "text": "사실적인 3D 렌더링 (Realistic)",
+                    "value": "3D Render"
+                },
+                {
+                    "id": "style_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "icon_style"
+        },
+        {
+            "id": "s6_icon_metaphor",
+            "category": "Metaphor",
+            "question_text": "브랜드를 상징하는 핵심 오브젝트는 무엇인가요? (예: 배송-박스, 뷰티-꽃, IT-회로)",
+            "question_type": "short_answer",
+            "required": true,
+            "context_key": "icon_metaphor"
+        },
+        {
+            "id": "s6_icon_shape",
+            "category": "Shape",
+            "question_text": "심볼의 배경 프레임 형태는?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "shape_squircle",
+                    "text": "부드러운 사각형 (Squircle/Rounded Box)",
+                    "value": "Squircle"
+                },
+                {
+                    "id": "shape_circle",
+                    "text": "원형 (Circle)",
+                    "value": "Circle"
+                },
+                {
+                    "id": "shape_none",
+                    "text": "배경 없는 누끼형 (Object Only)",
+                    "value": "Transparent Background"
+                },
+                {
+                    "id": "shape_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "icon_shape"
+        },
+        {
+            "id": "s6_icon_texture",
+            "category": "Texture",
+            "question_text": "심볼의 표면 질감은 어떠해야 하나요?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "tex_smooth",
+                    "text": "매트하고 부드러운 (Matte)",
+                    "value": "Smooth/Matte"
+                },
+                {
+                    "id": "tex_glossy",
+                    "text": "반짝이는 유광/유리 (Glossy/Glass)",
+                    "value": "Glossy/Glassmorphism"
+                },
+                {
+                    "id": "tex_metal",
+                    "text": "세련된 메탈릭 (Metallic)",
+                    "value": "Metallic"
+                },
+                {
+                    "id": "tex_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "icon_texture"
+        },
+        {
+            "id": "s6_icon_detail",
+            "category": "Detail",
+            "question_text": "표현의 디테일 수준은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "det_min",
+                    "text": "최소한의 선 (미니멀)",
+                    "value": "Minimal Line Art"
+                },
+                {
+                    "id": "det_med",
+                    "text": "직관적인 명암 표현",
+                    "value": "Semi-Detailed"
+                },
+                {
+                    "id": "det_max",
+                    "text": "사실적인 고해상도 묘사",
+                    "value": "Highly Detailed"
+                },
+                {
+                    "id": "det_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "icon_complexity"
+        },
+        {
+            "id": "s6_icon_platform",
+            "category": "Design Language",
+            "question_text": "추구하는 디자인 문법(Vibe)은?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "plat_ios",
+                    "text": "감성적이고 여백이 많은 (Modern/Clean)",
+                    "value": "Modern Minimalist"
+                },
+                {
+                    "id": "plat_android",
+                    "text": "기능적이고 표준화된 (Standard/Bold)",
+                    "value": "Standard Material"
+                },
+                {
+                    "id": "plat_cross",
+                    "text": "독창적이고 실험적인 (Avant-garde)",
+                    "value": "Creative/Unique"
+                },
+                {
+                    "id": "plat_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "icon_platform"
+        },
+        {
+            "id": "s6_icon_colors",
+            "category": "Colors",
+            "question_text": "아이콘에 사용할 색상은 무엇인가요?",
+            "question_type": "multiple_choice",
+            "max_selections": 3,
+            "options": [
+                {
+                    "id": "col_yellow",
+                    "text": "옐로우",
+                    "value": "Yellow"
+                },
+                {
+                    "id": "col_orange",
+                    "text": "오렌지",
+                    "value": "Orange"
+                },
+                {
+                    "id": "col_red",
+                    "text": "레드",
+                    "value": "Red"
+                },
+                {
+                    "id": "col_purple",
+                    "text": "퍼플",
+                    "value": "Purple"
+                },
+                {
+                    "id": "col_blue",
+                    "text": "블루",
+                    "value": "Blue"
+                },
+                {
+                    "id": "col_green",
+                    "text": "그린",
+                    "value": "Green"
+                },
+                {
+                    "id": "col_brown",
+                    "text": "브라운",
+                    "value": "Brown"
+                },
+                {
+                    "id": "col_gray",
+                    "text": "그레이",
+                    "value": "Gray"
+                },
+                {
+                    "id": "col_black",
+                    "text": "블랙",
+                    "value": "Black"
+                },
+                {
+                    "id": "col_white",
+                    "text": "화이트",
+                    "value": "White"
+                },
+                {
+                    "id": "col_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "icon_colors"
+        },
+        {
+            "id": "s6_icon_additional",
+            "category": "Additional",
+            "question_text": "기타 심볼 디자인 관련 요청사항이 있나요?",
+            "question_type": "short_answer",
+            "required": false,
+            "context_key": "icon_additional_notes"
+        }
+    ],
+    "step_7": [
+        {
+            "id": "s7_model_look",
+            "category": "Appearance",
+            "question_text": "모델의 외모 분위기는?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "look_warm",
+                    "text": "따뜻하고 친근한 (Friendly)",
+                    "value": "Warm & Friendly"
+                },
+                {
+                    "id": "look_pro",
+                    "text": "스마트하고 전문적인 (Professional)",
+                    "value": "Smart & Professional"
+                },
+                {
+                    "id": "look_hip",
+                    "text": "개성 강한 트렌드 세터 (Trendy)",
+                    "value": "Hip & Trendy"
+                },
+                {
+                    "id": "look_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_vibe"
+        },
+        {
+            "id": "s7_model_emotion",
+            "category": "Emotion",
+            "question_text": "모델의 표정/감정은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "emo_smile",
+                    "text": "밝은 미소",
+                    "value": "Bright Smile"
+                },
+                {
+                    "id": "emo_focus",
+                    "text": "신뢰감을 주는 진지함",
+                    "value": "Focused/Serious"
+                },
+                {
+                    "id": "emo_relax",
+                    "text": "편안하고 여유로운",
+                    "value": "Relaxed & Comfortable"
+                },
+                {
+                    "id": "emo_confident",
+                    "text": "자신감 넘치는",
+                    "value": "Confident"
+                },
+                {
+                    "id": "emo_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_emotion"
+        },
+        {
+            "id": "s7_model_fashion",
+            "category": "Fashion",
+            "question_text": "모델의 의상 스타일은?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "fash_casual",
+                    "text": "편안한 일상복/캐주얼",
+                    "value": "Casual/Streetwear"
+                },
+                {
+                    "id": "fash_biz",
+                    "text": "정장/비즈니스 캐주얼",
+                    "value": "Business Casual"
+                },
+                {
+                    "id": "fash_sporty",
+                    "text": "활동적인 스포츠/애슬레저",
+                    "value": "Sporty/Active"
+                },
+                {
+                    "id": "fash_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_outfit"
+        },
+        {
+            "id": "s7_model_action",
+            "category": "Action",
+            "question_text": "모델은 어떤 행동을 하고 있나요?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "act_phone",
+                    "text": "제품/결과물을 보며 만족함",
+                    "value": "Looking at Product & Smiling"
+                },
+                {
+                    "id": "act_work",
+                    "text": "업무/작업에 열중함",
+                    "value": "Working/Focusing"
+                },
+                {
+                    "id": "act_life",
+                    "text": "취미/라이프스타일을 즐김",
+                    "value": "Enjoying Hobby"
+                },
+                {
+                    "id": "act_interact",
+                    "text": "제품(서비스)을 직접 사용 중",
+                    "value": "Demonstrating Product"
+                },
+                {
+                    "id": "act_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_action"
+        },
+        {
+            "id": "s7_model_environment",
+            "category": "Environment",
+            "question_text": "촬영 배경(장소)은 어디인가요?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "env_indoor_home",
+                    "text": "실내 - 집/거실",
+                    "value": "Indoor Home"
+                },
+                {
+                    "id": "env_indoor_cafe",
+                    "text": "실내 - 카페/공공장소",
+                    "value": "Cafe/Public Space"
+                },
+                {
+                    "id": "env_indoor_office",
+                    "text": "실내 - 오피스/스튜디오",
+                    "value": "Office"
+                },
+                {
+                    "id": "env_outdoor",
+                    "text": "실외 - 공원/거리/자연",
+                    "value": "Outdoor"
+                },
+                {
+                    "id": "env_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_environment"
+        },
+        {
+            "id": "s7_model_lighting",
+            "category": "Lighting",
+            "question_text": "선호하는 조명 스타일은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "light_sun",
+                    "text": "자연스러운 햇살 (Natural)",
+                    "value": "Natural Sunlight"
+                },
+                {
+                    "id": "light_studio",
+                    "text": "선명하고 깨끗한 스튜디오 조명",
+                    "value": "Bright Studio Light"
+                },
+                {
+                    "id": "light_moody",
+                    "text": "감성적인 노을/새벽",
+                    "value": "Moody Sunset/Dawn"
+                },
+                {
+                    "id": "light_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_lighting_mood"
+        },
+        {
+            "id": "s7_model_shot",
+            "category": "Angle",
+            "question_text": "카메라 촬영 앵글은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "shot_bust",
+                    "text": "얼굴 위주의 바스트 샷",
+                    "value": "Bust Shot"
+                },
+                {
+                    "id": "shot_waist",
+                    "text": "상반신 (허리 위)",
+                    "value": "Waist Shot"
+                },
+                {
+                    "id": "shot_full",
+                    "text": "전신 샷",
+                    "value": "Full Body Shot"
+                },
+                {
+                    "id": "shot_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_camera_shot"
+        },
+        {
+            "id": "s7_model_framing",
+            "category": "Composition",
+            "question_text": "인물 배치 구도와 여백은?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "frame_tight",
+                    "text": "인물을 화면 가득 채움 (클로즈업)",
+                    "value": "Tight Framing"
+                },
+                {
+                    "id": "frame_balanced",
+                    "text": "적당한 균형감",
+                    "value": "Balanced"
+                },
+                {
+                    "id": "frame_spacious",
+                    "text": "여백을 많이 둠 (텍스트 배치 용이)",
+                    "value": "Spacious Background"
+                },
+                {
+                    "id": "frame_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "model_framing"
+        },
+        {
+            "id": "s7_model_additional",
+            "category": "Additional",
+            "question_text": "모델 생성 시 특별히 강조하고 싶은 요소가 있나요?",
+            "question_type": "short_answer",
+            "required": false,
+            "context_key": "model_additional_notes"
+        }
+    ],
+    "step_8": [
+        {
+            "id": "s8_stage_device",
+            "category": "Presentation Medium",
+            "question_text": "제품/서비스를 어떤 형태로 연출할까요?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "dev_phone",
+                    "text": "디지털 디바이스 화면 (앱/웹)",
+                    "value": "Digital Device/Screen"
+                },
+                {
+                    "id": "dev_tablet",
+                    "text": "실물 제품 패키지 (박스/용기)",
+                    "value": "Physical Product Packaging"
+                },
+                {
+                    "id": "dev_laptop",
+                    "text": "제품 그 자체 (의류/음식 등)",
+                    "value": "Product Itself"
+                },
+                {
+                    "id": "dev_float",
+                    "text": "추상적인 오브젝트/심볼",
+                    "value": "Abstract Object/Symbol"
+                },
+                {
+                    "id": "dev_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_device"
+        },
+        {
+            "id": "s8_stage_device_color",
+            "category": "Object Tone",
+            "question_text": "메인 오브젝트의 컬러감/재질은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "color_silver",
+                    "text": "메탈릭/실버 (세련됨)",
+                    "value": "Metallic/Silver"
+                },
+                {
+                    "id": "color_black",
+                    "text": "블랙/다크 (고급스러움)",
+                    "value": "Black/Dark Tone"
+                },
+                {
+                    "id": "color_white",
+                    "text": "화이트/밝음 (깨끗함)",
+                    "value": "White/Bright Tone"
+                },
+                {
+                    "id": "color_gold",
+                    "text": "비비드/브랜드 컬러 (강조)",
+                    "value": "Vibrant/Brand Color"
+                },
+                {
+                    "id": "color_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_device_color"
+        },
+        {
+            "id": "s8_stage_angle",
+            "category": "Angle",
+            "question_text": "제품을 바라보는 시점은?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "ang_iso",
+                    "text": "아이소메트릭 (45도 얼짱각도)",
+                    "value": "Isometric View"
+                },
+                {
+                    "id": "ang_front",
+                    "text": "정면 (Front View)",
+                    "value": "Front View"
+                },
+                {
+                    "id": "ang_top",
+                    "text": "항공샷 (Top View/Flat lay)",
+                    "value": "Top Down View"
+                },
+                {
+                    "id": "ang_close",
+                    "text": "디테일 클로즈업 (Macro)",
+                    "value": "Macro Closeup"
+                },
+                {
+                    "id": "ang_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_angle"
+        },
+        {
+            "id": "s8_stage_env",
+            "category": "Environment",
+            "question_text": "제품이 놓여질 배경 환경은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "env_desk",
+                    "text": "오피스/작업 환경 (전문성)",
+                    "value": "Office Desk Setup"
+                },
+                {
+                    "id": "env_cafe",
+                    "text": "카페/테이블 (라이프스타일)",
+                    "value": "Cafe Table/Lifestyle"
+                },
+                {
+                    "id": "env_studio",
+                    "text": "깔끔한 단색 스튜디오 (제품 집중)",
+                    "value": "Minimal Studio Background"
+                },
+                {
+                    "id": "env_abstract",
+                    "text": "추상적인 3D 도형/그래픽 배경",
+                    "value": "Abstract 3D Shapes"
+                },
+                {
+                    "id": "env_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_environment"
+        },
+        {
+            "id": "s8_stage_props",
+            "category": "Props",
+            "question_text": "주변에 함께 배치할 소품은? (예: 커피잔, 식물, 문구류 등)",
+            "question_type": "short_answer",
+            "required": false,
+            "context_key": "staging_props"
+        },
+        {
+            "id": "s8_stage_material",
+            "category": "Material",
+            "question_text": "바닥이나 배경의 재질감은?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "mat_wood",
+                    "text": "따뜻한 원목 (Wood)",
+                    "value": "Wood Texture"
+                },
+                {
+                    "id": "mat_marble",
+                    "text": "차가운 대리석/돌 (Stone)",
+                    "value": "Marble/Stone"
+                },
+                {
+                    "id": "mat_clay",
+                    "text": "부드러운 클레이/파스텔 (Clay)",
+                    "value": "Clay/Pastel"
+                },
+                {
+                    "id": "mat_fabric",
+                    "text": "천/패브릭 질감 (Fabric)",
+                    "value": "Fabric/Textile"
+                },
+                {
+                    "id": "mat_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_material"
+        },
+        {
+            "id": "s8_stage_lighting",
+            "category": "Lighting",
+            "question_text": "조명과 그림자 스타일은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "light_soft",
+                    "text": "부드럽고 자연스러운 (Soft Light)",
+                    "value": "Soft Natural Light"
+                },
+                {
+                    "id": "light_dramatic",
+                    "text": "강렬한 대비/그림자 (Dramatic)",
+                    "value": "Dramatic Sunlight"
+                },
+                {
+                    "id": "light_studio",
+                    "text": "균일한 스튜디오 조명 (Clean)",
+                    "value": "Even Studio Light"
+                },
+                {
+                    "id": "light_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_lighting"
+        },
+        {
+            "id": "s8_stage_color_temp",
+            "category": "Color Temperature",
+            "question_text": "전체적인 색온도는?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "temp_warm",
+                    "text": "따뜻한 톤 (Warm/Orange)",
+                    "value": "Warm"
+                },
+                {
+                    "id": "temp_neutral",
+                    "text": "중성 톤 (Neutral)",
+                    "value": "Neutral"
+                },
+                {
+                    "id": "temp_cool",
+                    "text": "차가운 톤 (Cool/Blue)",
+                    "value": "Cool"
+                },
+                {
+                    "id": "temp_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "staging_color_temperature"
+        },
+        {
+            "id": "s8_stage_additional",
+            "category": "Additional",
+            "question_text": "기타 제품 연출 관련 요청사항이 있나요?",
+            "question_type": "short_answer",
+            "required": false,
+            "context_key": "staging_additional_notes"
+        }
+    ],
+    "step_9": [
+        {
+            "id": "s9_ad_goal",
+            "category": "Goal",
+            "question_text": "이번 광고/포스터의 마케팅 목표는?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "goal_launch",
+                    "text": "신규 출시 알림 (New Launch)",
+                    "value": "New Launch"
+                },
+                {
+                    "id": "goal_promo",
+                    "text": "프로모션/세일 (Sale)",
+                    "value": "Promotion Sale"
+                },
+                {
+                    "id": "goal_feature",
+                    "text": "핵심 기능/장점 소구 (Benefit)",
+                    "value": "Feature Highlight"
+                },
+                {
+                    "id": "goal_review",
+                    "text": "신뢰도/후기 강조 (Trust)",
+                    "value": "User Review"
+                },
+                {
+                    "id": "goal_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_goal"
+        },
+        {
+            "id": "s9_ad_channel",
+            "category": "Channel",
+            "question_text": "주요 게재 채널은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "ch_social",
+                    "text": "인스타그램/SNS (감성 중심)",
+                    "value": "Social Media"
+                },
+                {
+                    "id": "ch_professional",
+                    "text": "링크드인/B2B (신뢰 중심)",
+                    "value": "Professional Platform"
+                },
+                {
+                    "id": "ch_display",
+                    "text": "배너/디스플레이 광고 (주목도 중심)",
+                    "value": "Display Ad"
+                },
+                {
+                    "id": "ch_print",
+                    "text": "인쇄물/오프라인 포스터",
+                    "value": "Print/Offline"
+                },
+                {
+                    "id": "ch_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_channel"
+        },
+        {
+            "id": "s9_ad_layout",
+            "category": "Layout",
+            "question_text": "선호하는 레이아웃 구성은?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "lay_img_full",
+                    "text": "이미지 중심 (풀스크린 + 텍스트 얹기)",
+                    "value": "Full Image Background"
+                },
+                {
+                    "id": "lay_split",
+                    "text": "분할형 (이미지/텍스트 반반)",
+                    "value": "Half & Half Split"
+                },
+                {
+                    "id": "lay_top_bottom",
+                    "text": "상하/좌우 배치 (안정적인 구성)",
+                    "value": "Top Image Bottom Text"
+                },
+                {
+                    "id": "lay_center",
+                    "text": "중앙 집중형 (오브젝트 강조)",
+                    "value": "Center Focused"
+                },
+                {
+                    "id": "lay_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_layout"
+        },
+        {
+            "id": "s9_ad_background",
+            "category": "Background",
+            "question_text": "광고 배경 스타일은?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "bg_solid",
+                    "text": "브랜드 컬러 단색 (깔끔함)",
+                    "value": "Solid Brand Color"
+                },
+                {
+                    "id": "bg_gradient",
+                    "text": "트렌디한 그라데이션",
+                    "value": "Gradient"
+                },
+                {
+                    "id": "bg_image",
+                    "text": "앞 단계에서 생성한 연출 이미지 활용",
+                    "value": "Generated Image"
+                },
+                {
+                    "id": "bg_pattern",
+                    "text": "패턴/텍스처 활용",
+                    "value": "Abstract Pattern"
+                },
+                {
+                    "id": "bg_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_background"
+        },
+        {
+            "id": "s9_ad_color_mood",
+            "category": "Color Mood",
+            "question_text": "광고의 전체적인 톤앤매너는?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "color_bright",
+                    "text": "밝고 경쾌한 (High Key)",
+                    "value": "Bright Pastel"
+                },
+                {
+                    "id": "color_vibrant",
+                    "text": "강렬하고 눈에 띄는 (Vivid)",
+                    "value": "Vibrant & Bold"
+                },
+                {
+                    "id": "color_dark",
+                    "text": "차분하고 고급스러운 (Low Key)",
+                    "value": "Dark & Sophisticated"
+                },
+                {
+                    "id": "color_brand",
+                    "text": "브랜드 아이덴티티 강조",
+                    "value": "Brand Color Dominant"
+                },
+                {
+                    "id": "color_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_color_mood"
+        },
+        {
+            "id": "s9_ad_visual_focus",
+            "category": "Visual Focus",
+            "question_text": "시각적으로 가장 강조할 요소는?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "vis_mockup",
+                    "text": "제품/서비스 실제 모습 (Product)",
+                    "value": "Product Image"
+                },
+                {
+                    "id": "vis_people",
+                    "text": "모델의 표정과 분위기 (People)",
+                    "value": "Happy Model"
+                },
+                {
+                    "id": "vis_typo",
+                    "text": "강렬한 카피/메시지 (Typography)",
+                    "value": "Bold Typography"
+                },
+                {
+                    "id": "vis_icon",
+                    "text": "브랜드 심볼/로고 (Brand)",
+                    "value": "Brand Logo"
+                },
+                {
+                    "id": "vis_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_main_visual"
+        },
+        {
+            "id": "s9_ad_headline",
+            "category": "Copy - Headline",
+            "question_text": "가장 크게 보여줄 헤드라인 문구는?",
+            "question_type": "short_answer",
+            "required": true,
+            "context_key": "ad_headline"
+        },
+        {
+            "id": "s9_ad_headline_position",
+            "category": "Copy - Position",
+            "question_text": "헤드라인 위치는?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "pos_top",
+                    "text": "상단 (Top)",
+                    "value": "Top"
+                },
+                {
+                    "id": "pos_center",
+                    "text": "중앙 (Center)",
+                    "value": "Center"
+                },
+                {
+                    "id": "pos_bottom",
+                    "text": "하단 (Bottom)",
+                    "value": "Bottom"
+                },
+                {
+                    "id": "pos_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_headline_position"
+        },
+        {
+            "id": "s9_ad_subtext",
+            "category": "Copy - Subtext",
+            "question_text": "부가 설명 텍스트 (선택사항)",
+            "question_type": "short_answer",
+            "required": false,
+            "context_key": "ad_subtext"
+        },
+        {
+            "id": "s9_ad_logo_position",
+            "category": "Logo",
+            "question_text": "브랜드 로고 배치는?",
+            "question_type": "multiple_choice",
+            "max_selections": 2,
+            "options": [
+                {
+                    "id": "logo_top_left",
+                    "text": "좌상단",
+                    "value": "Top Left"
+                },
+                {
+                    "id": "logo_top_right",
+                    "text": "우상단",
+                    "value": "Top Right"
+                },
+                {
+                    "id": "logo_bottom_left",
+                    "text": "좌하단",
+                    "value": "Bottom Left"
+                },
+                {
+                    "id": "logo_bottom_center",
+                    "text": "하단 중앙",
+                    "value": "Bottom Center"
+                },
+                {
+                    "id": "logo_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_logo_position"
+        },
+        {
+            "id": "s9_ad_logo_size",
+            "category": "Logo Size",
+            "question_text": "로고 크기는?",
+            "question_type": "single_choice",
+            "options": [
+                {
+                    "id": "logo_small",
+                    "text": "작게 (은은하게)",
+                    "value": "Small"
+                },
+                {
+                    "id": "logo_medium",
+                    "text": "적당한 크기 (표준)",
+                    "value": "Medium"
+                },
+                {
+                    "id": "logo_large",
+                    "text": "크고 임팩트 있게",
+                    "value": "Large"
+                },
+                {
+                    "id": "logo_custom",
+                    "text": "직접 입력",
+                    "value": "custom",
+                    "allow_custom_input": true
+                }
+            ],
+            "required": true,
+            "context_key": "ad_logo_size"
+        },
+        {
+            "id": "s9_ad_additional",
+            "category": "Additional",
+            "question_text": "기타 광고 디자인 관련 요청사항이 있나요?",
+            "question_type": "short_answer",
+            "required": false,
+            "context_key": "ad_additional_notes"
+        }
+    ]
+}
