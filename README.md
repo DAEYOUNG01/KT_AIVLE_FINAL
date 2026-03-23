@@ -49,7 +49,7 @@ https://aibrandpilot.com/ - 제작 사이트
         <strong>장혁준</strong><br>
         BE / CLOUD<br><br>
         • Backend/REST API 개발<br>
-        • FastAPI 서버/워크플로우 설계<br>
+        • FastAPI /워크플로우 설계<br>
         • AWS 구성 및 Docker 배포
       </div>
     </td>
@@ -57,7 +57,7 @@ https://aibrandpilot.com/ - 제작 사이트
       <div align="center">
         <img src="https://github.com/user-attachments/assets/109a4c4a-b077-4e6e-b872-5972f66c5c90" width="100" height="100" style="border-radius: 50%;"><br><br>
         <strong>김효성</strong><br>
-        FRONTEND<br><br>
+        FE<br><br>
         • UI/UX 서비스 설계 및 개발<br>
         • 프론트엔드 성능 최적화<br>
         • FE/Server 연동 및 오류 개선
@@ -67,7 +67,7 @@ https://aibrandpilot.com/ - 제작 사이트
       <div align="center">
         <img src="https://github.com/user-attachments/assets/d7f04931-52f5-4b66-9fbd-39fd26119e37" width="100" height="100" style="border-radius: 50%;"><br><br>
         <strong>이시연</strong><br>
-        FRONTEND<br><br>
+        FE<br><br>
         • 서비스 기획 및 UI/UX 개발<br>
         • 사용자 인증 및 API 연동<br>
         • CRUD 기능 구현
