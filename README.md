@@ -5,7 +5,9 @@ https://aibrandpilot.com/ - 제작 사이트
 <img width="800" height="320" alt="image" src="https://github.com/user-attachments/assets/50528677-eff8-4fe8-bd5b-99d810c86cf0" />
 </div>
 
-**BRANDPILOT은 기존 브랜딩 컨설팅 시장의 높은 진입 장벽인 막대한 비용과 장시간 대기을 허물고, 주관적 평가에 의존하던 방식을 개선하기 위해 탄생한 생성형 AI 기반 맞춤형 브랜딩 컨설팅 플랫폼입니다.**
+**BRANDPILOT**
+
+**초기 창업자와 스타트업을 위해 기획부터 시각 결과물까지 자동화된 브랜딩 과정을 제공하는 생성형 AI 기반 맞춤형 컨설팅 플랫폼입니다.**
 
 # <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/26a6b24a-1fc6-4cab-b0cf-fee28c67c177" /> 팀 소개 
 
@@ -70,6 +72,8 @@ https://aibrandpilot.com/ - 제작 사이트
 
 </div>
 
+---
+
 # CONTENTS 
 
 * 프로젝트 개요
@@ -84,19 +88,77 @@ https://aibrandpilot.com/ - 제작 사이트
 
 # 프로젝트 개요 
 
-* **서비스 소개**
+## 1️⃣ 서비스 소개 
 
+💡BRANDPIROT은 스타트업과 창업자를 위해 단기간 자동화된 브랜딩 과정을 제공하는 플랫폼
 
+💡기획부터 시각 결과물 제작까지 단기간에 자동화된 브랜딩 과정 제공
 
-* **문제 정의 및 기획 배경**
+## 2️⃣ 문제 정의 및 기획 배경
 
-* **기존 솔루션의 한계 및 차별점**
+출처:Top 20 Poor Marketing statics 2025, amraandelma
 
-# 주요 기능 
+💡 마케팅 예산의 64%가 잘못된 키워드나 타겟팅으로 낭비
 
-* **단계별 AI 브랜드 컨설팅**
+💡 마케터의 43%가 명확한 전략 부재를 겪으며, 일관성 없는 브랜딩으로 마케팅 실패 초래
 
-* **투자 라운지(게시판) 및 홍보물 컨설팅**
+💡 명확한 브랜드 전략 및 객관적 판단 기준의 필요성 대두
+
+## 3️⃣ 기존 솔루션의 한계 및 차별점
+
+💡**기존 한계:** 에이전시 의뢰 시 수천만 원의 높은 비용 발생 및 인력 중심 작업으로 인한 대량 처리/객관성 유지의 어려움
+
+💡**해결 및 차별점:** 생성형 AI 도입으로 컨설팅 기간 단축 및 인건비를 AI 토큰 비용으로 대체하여 저비용·고효율 구조 실현
+
+💡**프롬프트 구조화를 통해 기업 요구사항에 최적화된 맞춤형 전략 도출**
+
+---
+
+# ✨ 주요 기능 
+
+## 1️⃣ 단계별 AI 브랜드 컨설팅 
+
+📌 **기업 초기진단** : 업종, 타깃, 페인포인트, USP 등을 분석하여 브랜드 현황 및 문제 정의 구조화
+
+| 기업 진단 인터뷰 1 | 기업 진단 인터뷰 2 |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/4dff9020-814b-4cfa-97f3-bf345b1e4080" width="400" height="300" /> | <img src="https://github.com/user-attachments/assets/35a818d3-af50-48a9-8078-a0c29c469fe0" width="400" height="300" /> |
+
+📌 **네이밍 컨설팅** : 초기 진단 기반 + 네이밍 관련 요구사항 분석 후 3가지 제안 
+
+| 네이밍 컨설팅 1 | 네이밍 컨설팅 2 |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/2f0caebd-dd60-4590-b301-4ff08d18939b" width="400" height="300" /> | <img src="https://github.com/user-attachments/assets/1d51b001-d939-4528-8079-3d0b491010f4" width="400" height="300" /> |
+
+📌 **브랜드 컨셉 진단** : 선정된 네이밍 + 컨셉 요구사하 분석 후 핵심 가치와 고객 전달 메시지를 도출하여 컨셉 제안
+
+| 브랜드 컨셉 1 | 브랜드 컨셉 2 |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/46036925-52f2-499c-83bd-75d1604cc43b" width="400" height="300" /> | <img src="https://github.com/user-attachments/assets/0402a1e6-8bbe-4690-8f79-4ac5010696cb" width="400" height="300" /> |
+
+📌 **스토리텔링** : 타겟 페르소나와 컨셉을 종합해 고객 공감을 이끌어내는 감성적 브랜드 스토리 창작
+
+| 브랜드 스토리 1 | 브랜드 스토리 2 |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/b98792ef-18c7-48cd-a5e0-fb62049261e8" width="400" height="300" /> | <img src="https://github.com/user-attachments/assets/87e6ac35-84f1-47de-8f0d-f87b276dcae6" width="400" height="300" /> |
+
+📌 **로고 컨설팅** : 텍스트 전략을 구체적 시각 요소로 변환하여 디자인 스타일, 색상 등에 맞는 로고 이미지 생성
+
+| 브랜드 로고 1 | 브랜드 로고 2 |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/3517a8a1-f753-4a83-9a6a-e7a7bff24e22" width="400" height="300" /> | <img src="https://github.com/user-attachments/assets/cafc127c-59ee-4124-85ae-29a73d3f31af" width="400" height="300" /> |
+
+## 2️⃣ 투자 라운지(게시판) 
+
+**완성된 브랜딩 산출물을 활용해 투자자와 연결될 수 있는 기업 홍보 공간 제공**
+
+📌 **투자 라운지** 
+
+| 투자 라운지 페이지 | 투자 라운지 리스트 |
+| :---: | :---: |
+| <img src="https://github.com/user-attachments/assets/d5a878c8-d42d-40ea-88ee-b617cf220d1e" width="450" height="260" /> | <img src="https://github.com/user-attachments/assets/b176ceff-632e-4119-9069-5c74a11ef0bc" width="450" height="260" /> |
+
+--- 
 
 # 아키텍터 및 기술 스택
 
