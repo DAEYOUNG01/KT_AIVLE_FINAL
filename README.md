@@ -1,5 +1,4 @@
 # KT_AIVLE_FINAL
-https://aibrandpilot.com/ - 제작 사이트
 
 <div align="center">
 <img width="800" height="320" alt="image" src="https://github.com/user-attachments/assets/50528677-eff8-4fe8-bd5b-99d810c86cf0" />
