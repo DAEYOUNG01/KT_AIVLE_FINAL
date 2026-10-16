@@ -6,7 +6,7 @@
 
 **BRANDPILOT**
 
-**초기 창업자와 스타트업을 위해 브랜드 기획부터 시각 결과물 제작까지 지원하는 생성형 AI 기반 맞춤형 브랜딩 컨설팅 플랫폼입니다.**
+**초기 창업자와 스타트업을 위해 브랜드 기획부터 시각 결과물 제작까지 지원하는 생성형 AI 기반 맞춤형 브랜딩 컨설팅 플랫폼**
 
 # <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/26a6b24a-1fc6-4cab-b0cf-fee28c67c177" /> 팀 소개 
 
@@ -139,11 +139,11 @@
 | :---: | :---: |
 | <img src="https://github.com/user-attachments/assets/2f0caebd-dd60-4590-b301-4ff08d18939b" width="400" height="300" /> | <img src="https://github.com/user-attachments/assets/1d51b001-d939-4528-8079-3d0b491010f4" width="400" height="300" /> |
 
-📌 **Step 3. 브랜드 컨셉 진단 (Concept Node)** 
+📌 **Step 3. 브랜드 컨셉 생성 (Concept Node)** 
 
 **기술적 동작** : Diagnosis Context와 Naming Context의 진단 요약·선택 브랜드명·이름 제안 이유를 참조해 브랜드 컨셉 후보 생성
 
-**톤 동기화** : 브랜드명의 의미와 현재 요구사항을 연결해 컨셉 문장·제안 이유·핵심 가치 생성
+**브랜드 방향 구체화** : 브랜드명의 의미와 현재 요구사항을 연결해 컨셉 문장·제안 이유·핵심 가치 생성
 
 | 브랜드 컨셉 1 | 브랜드 컨셉 2 |
 | :---: | :---: |
@@ -215,7 +215,7 @@ III. 생성 결과를 화면 표시용 result와 후속 단계 입력용 state_c
 
 I.  GPT-5.1을 활용한 진단·네이밍·컨셉·스토리 생성 및 로고·홍보물의 시각 기획
 
-II. Nano Banana Pro를 활용한 로고·홍보물 이미지 생성
+II. Nano Banana Pro를 활용한 로고·로컬 홍보물 확장 이미지 생성
 
 III. GPT-4o·DALL-E 3 사용 경험을 바탕으로 텍스트 표현·브랜드명 가독성·스타일 제어를 검토한 생성 모델 전환
 
@@ -246,7 +246,7 @@ III. AWS S3를 활용한 최종 선택 로고 이미지 저장
 
 ---
 
-# 🌟 핵심 기술 및 트러블 슈팅
+# 🌟 핵심 기술 및 트러블슈팅
 
 ## 1️⃣ 프롬프트 구조화 및 생성 모델 전환
 
